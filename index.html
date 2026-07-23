@@ -138,6 +138,81 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
 .day.open .chev{transform:rotate(180deg)}
 .day-body{display:none;border-top:1px solid var(--line-soft)}
 .day.open .day-body{display:block}
+/* ===== Checklist ===== */
+.ck-wrap{max-width:1000px;margin:0 auto;padding:26px 22px 60px}
+.ck-hero{margin-bottom:22px}
+.ck-hero .g-tag{display:inline-block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-deep);background:#fbeede;border:1px solid rgba(194,84,42,.25);border-radius:20px;padding:6px 12px;margin-bottom:10px}
+.ck-hero h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.9rem;color:var(--ink);margin:0 0 8px}
+.ck-hero p{font-size:.94rem;color:var(--ink-soft);margin:0;max-width:640px;line-height:1.65}
+.ck-total{display:flex;align-items:center;gap:12px;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:13px 16px;margin:16px 0 24px;box-shadow:var(--shadow);flex-wrap:wrap}
+.ck-total b{font-family:'Outfit',sans-serif;font-size:1.05rem;color:var(--terra-deep)}
+.ck-total .bar{flex:1;min-width:140px;height:8px;border-radius:20px;background:var(--line);overflow:hidden}
+.ck-total .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--terra));transition:width .3s}
+.ck-save{font-family:'Outfit',sans-serif;font-size:.72rem;color:var(--ink-soft);opacity:.85;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.ck-total button{font-family:'Outfit',sans-serif;font-size:.76rem;color:var(--ink-soft);background:none;border:1px solid var(--line);border-radius:20px;padding:5px 11px;cursor:pointer}
+.ck-total button:hover{color:var(--terra-deep);border-color:var(--terra)}
+.ck-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;align-items:start}
+.ck-card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);border-top:3px solid var(--cc,var(--terra))}
+.ck-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;color:var(--ink);margin:0 0 3px;display:flex;align-items:center;gap:8px}
+.ck-card .ck-sub{font-size:.78rem;color:var(--ink-soft);margin:0 0 11px;line-height:1.5}
+.ck-card .ck-count{margin-left:auto;font-family:'Outfit',sans-serif;font-size:.72rem;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+.ck-item{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-top:1px solid var(--line);cursor:pointer;line-height:1.5}
+.ck-item:first-of-type{border-top:none}
+.ck-box{flex:0 0 17px;width:17px;height:17px;margin-top:1px;border:2px solid var(--terra);border-radius:5px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;transition:.15s}
+.ck-item.done .ck-box{background:var(--terra)}
+.ck-item.done .ck-box::after{content:"✓"}
+.ck-item.done .ck-tx{opacity:.5;text-decoration:line-through}
+.ck-tx{font-size:.86rem;color:var(--ink)}
+.ck-tx small{display:block;font-size:.77rem;color:var(--ink-soft);margin-top:1px;line-height:1.45;text-decoration:none!important}
+.ck-note{background:#fbeede;border:1px solid rgba(194,84,42,.2);border-radius:11px;padding:11px 13px;margin-top:12px;font-size:.8rem;color:var(--ink);line-height:1.55}
+.ck-note b{color:var(--terra-deep)}
+.ck-note.top{margin-top:2px;margin-bottom:13px}
+.ck-info{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);margin-bottom:16px;border-left:4px solid var(--ic,var(--sky))}
+.ck-info h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;color:var(--ink);margin:0 0 7px}
+.ck-info p{font-size:.87rem;color:var(--ink-soft);line-height:1.6;margin:0 0 7px}
+.ck-info p:last-child{margin-bottom:0}
+.ck-info b{color:var(--ink)}
+.ck-info ul{margin:6px 0 0;padding-left:19px}
+.ck-info li{font-size:.87rem;color:var(--ink-soft);line-height:1.6;margin-bottom:5px}
+.ck-info li b{color:var(--ink)}
+.ck-alert{border-left-color:var(--terra);background:linear-gradient(180deg,#fdf1e7,var(--paper-2))}
+.ck-h{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;color:var(--ink);margin:34px 0 4px}
+.ck-hs{font-size:.86rem;color:var(--ink-soft);margin:0 0 14px}
+.ck-tbl{width:100%;border-collapse:collapse;font-size:.83rem;margin-top:8px}
+.ck-tbl th,.ck-tbl td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+.ck-tbl th{font-family:'Outfit',sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--terra-deep);background:#fbeede}
+.ck-tbl td b{color:var(--ink)}
+.ck-tbl .tmp{font-family:'Outfit',sans-serif;font-weight:600;color:var(--terra-deep);white-space:nowrap}
+@media(max-width:560px){.ck-wrap{padding:20px 14px 50px}.ck-hero h2{font-size:1.5rem}.ck-grid{grid-template-columns:1fr}}
+/* ===== subitens (opções para escolher na hora) ===== */
+.subs{margin:10px 0 0;padding:0;list-style:none;border-left:2px dashed rgba(194,84,42,.3)}
+.subs li{position:relative;padding:7px 0 7px 14px;font-size:.84rem;line-height:1.5;color:var(--ink)}
+.subs li::before{content:"";position:absolute;left:-5px;top:14px;width:8px;height:8px;border-radius:50%;background:#fff;border:2px solid var(--terra)}
+.subs b{color:var(--ink)}
+.subs .s-meta{display:block;color:var(--ink-soft);font-size:.78rem;margin-top:1px}
+.subs a.s-map{display:inline-block;font:600 .7rem/1 'Outfit',sans-serif;color:var(--terra-deep);background:#fbeede;border:1px solid rgba(194,84,42,.25);border-radius:20px;padding:3px 7px;margin-left:6px;text-decoration:none;vertical-align:middle}
+.subs a.s-map:hover{background:var(--terra);color:#fff}
+/* ===== Nossas Reservas ===== */
+.resv{padding:34px 30px 10px;max-width:1180px;margin:0 auto}
+.resv-head{margin-bottom:18px}
+.resv-head .g-tag{display:inline-block;font:600 .72rem/1 'Outfit',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-deep);background:#fbeede;border:1px solid rgba(194,84,42,.25);border-radius:20px;padding:6px 12px;margin-bottom:10px}
+.resv-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.7rem;color:var(--ink);margin:0 0 6px}
+.resv-head p{font-size:.9rem;color:var(--ink-soft);margin:0;max-width:640px}
+.resv-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--paper-2);box-shadow:var(--shadow)}
+table.resv-t{border-collapse:separate;border-spacing:0;width:100%;min-width:900px}
+table.resv-t th,table.resv-t td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 12px;vertical-align:top}
+table.resv-t th:last-child,table.resv-t td:last-child{border-right:none}
+table.resv-t tr:last-child td{border-bottom:none}
+table.resv-t thead th{background:#fbeede;font-family:'Outfit',sans-serif;font-weight:600;font-size:.82rem;color:var(--terra-deep);text-align:center;white-space:nowrap;position:sticky;top:0}
+table.resv-t thead th .rd-w{display:block;font-weight:400;font-size:.7rem;color:var(--ink-soft);letter-spacing:.04em}
+table.resv-t th.rowh{background:var(--paper);text-align:left;font-size:.8rem;color:var(--ink);width:86px;white-space:nowrap;position:sticky;left:0;z-index:2}
+.rv{display:block;font:600 .84rem/1.3 'Outfit',sans-serif;color:var(--ink);cursor:pointer}
+.rv:hover{color:var(--terra-deep)}
+.rv-meta{display:block;font-size:.74rem;color:var(--ink-soft);line-height:1.45;margin-top:3px}
+.rv-time{display:inline-block;font:600 .72rem/1 'Outfit',sans-serif;color:#fff;background:var(--terra);border-radius:20px;padding:4px 8px;margin-top:5px}
+.rv-free{font-size:.78rem;color:var(--ink-soft);font-style:italic}
+.rv-none{color:#c9c2b6;font-size:.9rem}
+@media(max-width:760px){.resv{padding:24px 14px 6px}.resv-head h2{font-size:1.4rem}}
 .day-body-inner{padding:4px 18px 18px}
 
 .tl{position:relative;margin-top:12px;padding-left:6px}
@@ -249,6 +324,7 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
     <button class="tab-btn active" data-page="roteiro" onclick="switchPage('roteiro',this)">🗺️ Roteiro</button>
     <button class="tab-btn" data-page="historia" onclick="switchPage('historia',this)">📖 Sobre o Peru</button>
     <button class="tab-btn" data-page="orcamento" onclick="switchPage('orcamento',this)">💰 Orçamento</button>
+    <button class="tab-btn" data-page="checklist" onclick="switchPage('checklist',this)">🎒 Checklist</button>
   </nav>
 </div>
 
@@ -275,6 +351,7 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
       <span class="zone-tag"><span class="dot d-mira"></span>Miraflores</span>
       <span class="zone-tag"><span class="dot d-barranco"></span>Barranco</span>
       <span class="zone-tag"><span class="dot d-cusco"></span>Cusco / Vale</span>
+      <span class="zone-tag"><span class="dot" style="background:#fff;border:2px solid #c2542a;box-sizing:border-box"></span>Opcional</span>
       <span class="legend-div"></span>
       <span class="zone-tag"><span class="ref-ic">🌳</span>Parque</span>
       <span class="zone-tag"><span class="ref-ic">⚖️</span>Mercado</span>
@@ -297,8 +374,7 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
         <div class="tl">
           <div class="tl-item travel" data-stop="aero"><span class="tl-dot"></span><div class="tl-time">23:30 · pouso</div><div class="tl-title">Aeroporto Jorge Chávez</div><div class="tl-desc">Desembarque e retirada de bagagem. À noite o trânsito é leve.</div></div>
           <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Transfer aeroporto → Miraflores (~40–50 min de madrugada)</div>
-          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">~00:30</div><div class="tl-title">Check-in · Crowne Plaza Miraflores</div><div class="tl-desc">Direto para o hotel descansar. Dia só de chegada — a viagem começa de fato no dia 25.</div></div>
-          <div class="tl-item" data-stop="swiss"><span class="tl-dot"></span><div class="tl-time">~00:30</div><div class="tl-title">Check-in · Swissotel Lima</div><div class="tl-desc">Camila, Matheus e Ravi ficam hospedados no Swissotel, em San Isidro (a uns 10 min do Crowne). Mesma noite de chegada, base diferente — nos passeios o grupo se junta.</div></div>
+          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">~00:30</div><div class="tl-title">Check-in nos 3 hotéis · Crowne · Swissotel · Casa Andina</div><div class="tl-desc">O grupo se divide em três hotéis, todos em Miraflores/San Isidro (a poucos minutos entre si). Do aeroporto <b>cada família segue direto para o seu hotel</b>, sem passar pelos outros — só descansar, a viagem começa de fato no dia 25.</div></div>
         </div>
       </div></div>
     </article>
@@ -306,67 +382,135 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
     <article class="day" data-map="d25" style="--zone:var(--gold)">
       <div class="day-head" onclick="selectDay(this)">
         <div class="day-date"><span class="dnum">25</span><span class="dmon">jul</span></div>
-        <div class="day-info"><div class="dweek">Sábado · dia cheio</div><h3>Centro Histórico + Museo Larco</h3><div class="dzone"><span class="dot d-centro"></span>Centro / Pueblo Libre</div></div>
+        <div class="day-info"><div class="dweek">Sábado · ritmo tranquilo</div><h3>Museo Larco + Centro Histórico</h3><div class="dzone"><span class="dot d-centro"></span>Pueblo Libre / Centro</div></div>
         <span class="chev">⌄</span>
       </div>
       <div class="day-body"><div class="day-body-inner">
         <div class="tl">
-          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">09:00 · saída</div><div class="tl-title">Crowne Plaza</div><div class="tl-desc">O dia começa no hotel, em Miraflores. Peguem a van privativa rumo ao Centro Histórico — o lado oeste/norte da cidade, onde faremos tudo de uma vez.</div></div>
-          <div class="tl-item" data-stop="swiss"><span class="tl-dot"></span><div class="tl-time">09:00 · saída</div><div class="tl-title">Swissotel Lima</div><div class="tl-desc">Camila, Matheus e Ravi saem do Swissotel (San Isidro) e o grupo se junta para o passeio do dia.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~30–40 min de van do hotel até a Plaza Mayor</div>
-          <div class="tl-item" data-stop="plaza"><span class="tl-dot"></span><div class="tl-time">09:30</div><div class="tl-title">Plaza Mayor</div><div class="tl-desc">Praça plana, Palácio do Governo e Catedral. Se der o horário, vejam a troca da guarda.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> 2 quadras a pé (~5 min)</div>
-          <div class="tl-item" data-stop="sanfran"><span class="tl-dot"></span><div class="tl-time">11:00</div><div class="tl-title">Convento de São Francisco <span class="cost">~15–20 soles</span></div><div class="tl-desc">Biblioteca antiga e catacumbas. Fascina os adolescentes; tranquilo de caminhar.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~20 min de van até Pueblo Libre</div>
-          <div class="tl-item meal" data-stop="larcocafe"><span class="tl-dot"></span><div class="tl-time">13:00 · almoço</div><div class="tl-title">Café del Museo Larco <span class="cost">no jardim</span></div><div class="tl-desc">Um dos restaurantes mais charmosos de Lima, no jardim florido do próprio museu. Pratos peruanos clássicos (lomo saltado, causa, anticuchos) num ambiente tranquilo — perfeito para o grupo descansar antes da visita.</div></div>
-          <div class="tl-item" data-stop="larco"><span class="tl-dot"></span><div class="tl-time">14:30</div><div class="tl-title">Museo Larco <span class="cost">~45–50 soles</span></div><div class="tl-desc">História antiga do Peru, ouro e a curiosa sala de cerâmicas eróticas. Jardins lindos e percurso tranquilo. É aqui que o conteúdo da aba "Sobre o Peru" ganha vida.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~15 min de van até o Parque de la Reserva</div>
-          <div class="tl-item fest" data-stop="agua"><span class="tl-dot"></span><div class="tl-time">18:00 · imperdível</div><div class="tl-title">Circuito Mágico del Agua <span class="cost">~5 soles</span></div><div class="tl-desc">Maior complexo de fontes do mundo, com laser e música. Agrada todas as idades. Abre só às 15h.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> volta a Miraflores (~30 min)</div>
-          <div class="tl-item meal" data-stop="lalucha"><span class="tl-dot"></span><div class="tl-time">20:00 · jantar</div><div class="tl-title">La Lucha Sanguchería <span class="cost">criollo · barato</span></div><div class="tl-desc">Os sanduíches mais queridos de Lima — chicharrón, lechón, pavo — com batatas e sucos naturais (chicha morada). Informal, gostoso e econômico, perto do Parque Kennedy. Fecho leve e descontraído depois de um dia cheio.</div></div>
-        </div>
+          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">09:30 · saída</div><div class="tl-title">Saída dos hotéis · Crowne · Swissotel · Casa Andina</div><div class="tl-desc">Manhã sem correria: dá para tomar café com calma no hotel antes de sair. <b>Cada família sai direto do seu hotel para o Museo Larco</b> — ninguém precisa passar nos outros hotéis. O ponto de encontro é a entrada do museu, na calle Navarra.</div></div>
+<div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~35–50 min até o Museo Larco (é o próprio museu que estima esse tempo desde Miraflores; sábado de manhã costuma ficar no piso de baixo)</div>
+<div class="tl-item" data-stop="larco"><span class="tl-dot"></span><div class="tl-time">10:15 – 12:45</div><div class="tl-title">Museo Larco <span class="cost">45–50 soles</span></div><div class="tl-desc">Duas horas e meia para ver o acervo <b>sem pressa</b>, com folga antes do almoço — 5.000 anos de história pré-colombiana numa casa-grande do século XVIII, cercada pelos jardins mais bonitos de Lima. O ingresso já inclui a exposição permanente, o <b>depósito aberto ao público</b> (fileiras e fileiras de cerâmicas em prateleiras de vidro, que costuma ser a parte preferida da criançada) e a <b>galeria erótica Checan</b>. As legendas das salas têm versão em português. <b>Comprem online:</b> sai 5 soles mais barato por pessoa e a entrada é preferencial. É aqui que o conteúdo da aba "Sobre o Peru" ganha vida.</div></div>
+<div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> o restaurante fica no próprio museu — é só atravessar para o terraço</div>
+<div class="tl-item meal" data-stop="larcocafe"><span class="tl-dot"></span><div class="tl-time">13:00 – 14:30 · almoço · reservado</div><div class="tl-title">Café del Museo Larco <span class="cost">no jardim</span></div><div class="tl-desc">Um dos restaurantes mais charmosos de Lima, nos terraços do museu, debruçado sobre o jardim florido. Pratos peruanos contemporâneos (lomo saltado, causa, anticuchos) num ambiente tranquilo. <b>Reserva confirmada: 13h, 10 pessoas.</b></div></div>
+<div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Uber até a Plaza Mayor · ~20–25 min (sábado, trânsito leve)</div>
+<div class="tl-item" data-stop="plaza"><span class="tl-dot"></span><div class="tl-time">15:00</div><div class="tl-title">Plaza Mayor e Catedral</div><div class="tl-desc">Praça plana e agradável de caminhar, com o Palácio do Governo e a Catedral. Dentro da Catedral estão a cripta e o túmulo de Francisco Pizarro. <b>Atenção ao horário:</b> o funcionamento aos sábados muda com frequência e as fontes se contradizem — algumas falam em fechar às 13h, outras em ficar aberto até a noite. Vale conferir em <b>catedraldelima.org.pe</b> na véspera. Se estiver fechada, a praça por fora já vale a parada, e vocês seguem para São Francisco.</div></div>
+<div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> 2 quadras a pé (~5 min)</div>
+<div class="tl-item" data-stop="sanfran"><span class="tl-dot"></span><div class="tl-time">15:45</div><div class="tl-title">Convento de São Francisco <span class="cost">~15–20 soles</span></div><div class="tl-desc">Biblioteca antiga e as catacumbas subterrâneas, com milhares de ossos organizados em desenhos geométricos — fascina os adolescentes e é tranquilo de caminhar. A visita é sempre <b>guiada</b>, sai de tempos em tempos e leva cerca de 1h. A última entrada costuma ser por volta das 17h, então cheguem com folga.</div></div>
+<div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Uber até o Parque de la Reserva · ~10–15 min</div>
+<div class="tl-item fest" data-stop="agua"><span class="tl-dot"></span><div class="tl-time">18:00 · imperdível</div><div class="tl-title">Circuito Mágico del Agua <span class="cost">7 soles</span></div><div class="tl-desc">Maior complexo de fontes do mundo em parque público, com treze fontes cibernéticas. O parque abre às 15h e fica aberto até as 22h, mas é <b>depois do pôr do sol</b> que ele encanta. Chegando às 18h dá tempo de caminhar pelas fontes menores — várias são interativas e as crianças entram na água — antes do espetáculo. <b>O grande show</b> (laser, música e projeções sobre a cortina de água) acontece na Fuente de la Fantasía às <b>19h15, 20h15 e 21h10</b>: peguem o das 19h15 e voltem cedo para o hotel. Ingresso na bilheteria ou pelo site oficial.</div></div>
+<div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> volta a Miraflores (~20–30 min)</div>
+<div class="tl-item meal" data-stop="lalucha"><span class="tl-dot"></span><div class="tl-time">20:00 · jantar</div><div class="tl-title">La Lucha Sanguchería <span class="cost">criollo · barato</span></div><div class="tl-desc">Os sanduíches mais queridos de Lima — chicharrón, lechón, pavo — com batatas e sucos naturais (chicha morada). Informal, gostoso e econômico, no Parque Kennedy, a poucos minutos dos hotéis. Fecho leve para todo mundo dormir cedo: no dia seguinte tem voo para Cusco.</div></div>
+</div>
       </div></div>
     </article>
 
-    <article class="day" data-map="d26" style="--zone:var(--teal)">
+    <article class="day" data-map="d26" style="--zone:var(--sky)">
       <div class="day-head" onclick="selectDay(this)">
         <div class="day-date"><span class="dnum">26</span><span class="dmon">jul</span></div>
-        <div class="day-info"><div class="dweek">Domingo · manhã livre + voo</div><h3>Barranco ao ar livre, depois Cusco</h3><div class="dzone"><span class="dot d-barranco"></span>Barranco&nbsp;→&nbsp;✈️ Cusco</div></div>
+        <div class="day-info"><div class="dweek">Domingo · manhã leve + voo</div><h3>Miraflores fácil, depois Cusco</h3><div class="dzone"><span class="dot d-mira"></span>Miraflores&nbsp;→&nbsp;✈️ Cusco</div></div>
         <span class="day-badge b-travel">✈️ Cusco 18h15</span><span class="chev">⌄</span>
       </div>
       <div class="day-body"><div class="day-body-inner">
-        <div class="callout"><div class="co-t">🌤️ Manhã leve em Barranco</div><p>Voo só às 18h15, então a manhã e o começo da tarde são livres. Programa tranquilo e ao ar livre em Barranco — o bairro mais charmoso de Lima — com almoço prático antes de sair pro aeroporto (~16h30).</p></div>
+        <div class="callout"><div class="co-t">🌤️ Manhã leve em Miraflores</div><p>Voo só às 18h15, então a manhã e o começo da tarde são livres. Programa tranquilo e ao ar livre pertinho do hotel — Miraflores mesmo, para não se afastar. Assim é fácil voltar, pegar as malas e seguir ao aeroporto sem correria. Almoço livre.</p></div>
         <div class="tl">
-          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">09:00 · saída</div><div class="tl-title">Crowne Plaza</div><div class="tl-desc">O dia começa no hotel. Barranco fica coladinho em Miraflores — uns 10 min de carro. Deixem as malas prontas e levem o essencial; voltamos ao hotel à tarde para pegá-las.</div></div>
-          <div class="tl-item" data-stop="swiss"><span class="tl-dot"></span><div class="tl-time">09:00 · saída</div><div class="tl-title">Swissotel Lima</div><div class="tl-desc">Camila, Matheus e Ravi saem do Swissotel (San Isidro). Deixem as malas prontas — também passam para pegá-las à tarde antes do aeroporto.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~10 min do hotel até o Malecón de Barranco</div>
-          <div class="tl-item" data-stop="malbarranco"><span class="tl-dot"></span><div class="tl-time">09:30</div><div class="tl-title">Malecón de Barranco</div><div class="tl-desc">Comecem pelo Malécon com vista para o mar; desçam pela Bajada de Baños, a ladeira de murais. Tudo plano e tranquilo. Cafés com jardim por perto (La Bodega Verde, Café Ancestral) para uma pausa.</div></div>
-          <div class="tl-item" data-stop="mirador"><span class="tl-dot"></span><div class="tl-time">10:00</div><div class="tl-title">Mirador Catalina Recavarren</div><div class="tl-desc">Mirante sossegado sobre a falésia, com vista para a praia de Barranco e o Pacífico. Ótimo para sentar, ouvir o mar e tirar fotos longe das multidões.</div></div>
-          <div class="tl-item" data-stop="suspiros"><span class="tl-dot"></span><div class="tl-time">10:30</div><div class="tl-title">Puente de los Suspiros</div><div class="tl-desc">A ponte mais icônica de Barranco. Ótima para fotos do grupo. Vale espiar a galeria Dédalo, ali do lado, para artesanato de autor.</div></div>
-          <div class="tl-item meal" data-stop="isolina"><span class="tl-dot"></span><div class="tl-time">12:30 · almoço</div><div class="tl-title">Isolina Taberna <span class="cost">criolla · Barranco</span></div><div class="tl-desc">Taberna criolla aconchegante e premiada, com porções generosas para dividir — comida caseira peruana de verdade. Despedida saborosa de Lima antes de subir para os Andes.</div></div>
+          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">09:30 · saída</div><div class="tl-title">Saída dos hotéis · Crowne · Swissotel · Casa Andina</div><div class="tl-desc">O dia começa nos hotéis. Deixem as malas prontas e levem só o essencial — todos voltam aos hotéis à tarde para pegar as bagagens antes do voo para Cusco.</div></div>
+          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~10 min do hotel até Larcomar (ou caminhada pelo Malécon)</div>
+          <div class="tl-item" data-stop="larcomar"><span class="tl-dot"></span><div class="tl-time">10:00</div><div class="tl-title">Larcomar</div><div class="tl-desc">Shopping a céu aberto na falésia, sobre o mar. Mirantes com vista para o Pacífico, lojas de alpaca e prata, cafés e sorvetes. Bom começo suave de manhã.</div></div>
+          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~10 min de caminhada pelo Malécon</div>
+          <div class="tl-item" data-stop="amor"><span class="tl-dot"></span><div class="tl-time">11:00</div><div class="tl-title">Parque del Amor + Malecón de Miraflores</div><div class="tl-desc">No alto da falésia: mosaicos coloridos estilo Gaudí e a escultura "El Beso", com a imensidão do Pacífico ao fundo. O parque se estende num malecón linear plano, ótimo para caminhar com o grupo todo, sentar nos bancos, ver os parapentes.</div></div>
+          <div class="tl-item meal" data-stop="maretazo"><span class="tl-dot"></span><div class="tl-time">13:00 · almoço</div><div class="tl-title">Barra Maretazo <span class="cost">cevicheria · Miraflores</span></div><div class="tl-desc">Cevicheria muito bem avaliada em Miraflores (nota 4.6 no Google, quase 5 mil reviews), a poucas quadras do hotel. Ceviches frescos, risoto rosé de camarão e a opção <b>"arma tu barra"</b> — dois itens + bebida — ótimo custo-benefício. Fica na Calle Alcanfores 373. Ambiente descontraído, cabe grupo. Boa despedida gastronômica de Lima antes do voo. Quem preferir algo mais rápido pode pegar lanche livre em outro lugar — basta estar de volta ao hotel por volta das 15h30 para as malas.</div></div>
           <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> volta ao hotel para pegar as malas</div>
-          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">15:30</div><div class="tl-title">Crowne Plaza (pegar as malas)</div><div class="tl-desc">Passagem rápida no hotel para recolher a bagagem antes de seguir ao aeroporto.</div></div>
-          <div class="tl-item" data-stop="swiss"><span class="tl-dot"></span><div class="tl-time">15:30</div><div class="tl-title">Swissotel (pegar as malas)</div><div class="tl-desc">Camila, Matheus e Ravi passam no Swissotel para recolher a bagagem antes do aeroporto.</div></div>
+          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">15:30</div><div class="tl-title">Volta aos hotéis para pegar as malas</div><div class="tl-desc">Cada família passa no seu hotel (Crowne, Swissotel ou Casa Andina) para recolher a bagagem antes de seguir juntos ao aeroporto.</div></div>
           <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~16h30: transfer ao aeroporto (com folga)</div>
           <div class="tl-item travel" data-stop="aero"><span class="tl-dot"></span><div class="tl-time">18:15 · voo</div><div class="tl-title">Voo Lima → Cusco (aeroporto Jorge Chávez)</div><div class="tl-desc">Em Cusco, ritmo lento nas primeiras horas — altitude (3.400m) pede aclimatação, sobretudo para os avós. Mate de coca e refeição leve na 1ª noite.</div></div>
+          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~19h30: pouso em Cusco → traslado ao hotel</div>
+          <div class="tl-item meal" data-stop="nunaraymi"><span class="tl-dot"></span><div class="tl-time">~21h · jantar chegada · Cusco</div><div class="tl-title">Nuna Raymi — peruano tradicional</div><div class="tl-desc">Pousamos em Cusco ~19h30, já na altitude. Para a 1ª noite, o <b>Nuna Raymi</b> (Calle Triunfo, pertinho da Plaza) é uma boa pedida: <b>comida peruana tradicional</b>, com sopas quentinhas que caem super bem na chegada, e preço acessível. <b>Regra de ouro na chegada:</b> comida leve, muito líquido, sem exagero no álcool.</div></div>
         </div>
       </div></div>
     </article>
 
     <div class="leg"><span class="leg-num">02</span><h2>Cusco · Vale · Machu Picchu</h2><span class="leg-line"></span></div>
 
-    <article class="day" data-map="dcusco" style="--zone:var(--terra)">
+    <article class="day" data-map="dcusco27" style="--zone:var(--terra)">
       <div class="day-head" onclick="selectDay(this)">
-        <div class="day-date"><span class="dnum">27</span><span class="dmon">→30</span></div>
-        <div class="day-info"><div class="dweek">Seg → Qui</div><h3>Cusco, Vale Sagrado e Machu Picchu</h3><div class="dzone"><span class="dot d-cusco"></span>Andes</div></div>
-        <span class="chev">⌄</span>
+        <div class="day-date"><span class="dnum">27</span><span class="dmon">jul</span></div>
+        <div class="day-info"><div class="dweek">Segunda · aclimatação leve</div><h3>Cusco · aclimatação e centro histórico</h3><div class="dzone"><span class="dot d-cusco"></span>Andes · 3.400m</div></div>
+        <span class="day-badge b-fest">⛰️ 3.400m</span><span class="chev">⌄</span>
       </div>
       <div class="day-body"><div class="day-body-inner">
-        <div class="callout"><div class="co-t">⛰️ Miolo da viagem</div><p>Segue o roteiro da agência (Cusco → Águas Calientes → Machu Picchu → Cusco). Posso detalhar dia a dia quando quiser — aqui foco nas opções de celebração do pai, caso prefiram comemorar nos Andes.</p></div>
-        <div class="food-grid">
-          <div class="food-card" onclick="focusStop('cicciolina',event)"><div class="fc-cat">🎂 Dani · Cusco</div><h4>Cicciolina</h4><p>Casarão antigo em San Blas, caloroso e rústico-chique. Das experiências mais queridas da cidade.</p><span class="fc-zone"><span class="dot d-cusco"></span>Cusco · reserve</span></div>
-          <div class="food-card" onclick="focusStop('mapcafe',event)"><div class="fc-cat">🎂 Dani · Cusco</div><h4>MAP Café</h4><p>No pátio envidraçado de um museu. Sofisticado e cerimonioso, menu-degustação à noite.</p><span class="fc-zone"><span class="dot d-cusco"></span>Cusco · alto padrão</span></div>
-          <div class="food-card" onclick="focusStop('treehouse',event)"><div class="fc-cat">🎂 Dani · Águas Calientes</div><h4>Tree House (Rupa Wasi)</h4><p>Lodge de madeira na encosta. Atenção: dia 29 acordam cedo p/ Machu Picchu — celebração mais contida.</p><span class="fc-zone"><span class="dot d-cusco"></span>Águas Calientes</span></div>
+        <div class="callout"><div class="co-t">💊 Kit de aclimatação · o que ter à mão</div><p><b>Chá de coca (mate de coca):</b> os hotéis servem de graça no lobby — tomem à vontade. Para levar, compram folhas, saquinhos ou balas de coca no <b>Mercado San Pedro</b> ou em qualquer loja. <b>Sorojchi Pills</b> (as "soroche pills") e cápsulas naturais <b>ALTI Vital</b> se compram <b>sem receita</b> nas farmácias <b>Inkafarma</b> e <b>Mifarma</b> (tem várias perto da Plaza e na Av. El Sol). <b>Bombinhas de oxigênio</b> (OxiShot) também em farmácias e mercadinhos; os hotéis têm cilindro na recepção. Levem <b>ibuprofeno/paracetamol</b> para dor de cabeça. Como tem gente com 70 anos no grupo, vale <b>conversar com o médico no Brasil antes da viagem</b> (inclusive sobre o Diamox, que é com receita).</p><p><b>Na alimentação, o que ajuda:</b></p><ul style="margin:6px 0 0;padding-left:20px;line-height:1.5;font-size:.88rem;color:var(--ink)"><li>Consumo constante de água ao longo do dia</li><li>Carboidratos complexos (quinua, arroz, frutas)</li><li>Alimentos ricos em ferro (leguminosas, espinafre, carnes magras)</li></ul></div>
+        <div class="tl">
+          <div class="tl-item"><span class="tl-dot"></span><div class="tl-time">27 jul · dia inteiro</div><div class="tl-title">Dia livre · aclimatação total</div><div class="tl-desc">Dia inteiro <b>livre</b> para o corpo se adaptar antes do Vale Sagrado e de Machu Picchu. Cada família no seu ritmo: dormir bem, caminhadas curtas e <b>devagar</b>, <b>sem esforço</b> e sem álcool nos primeiros dias. Abaixo, paradas leves e opcionais pra quem estiver bem — todas no ritmo de quem está se aclimatando.</div></div>
+          <div class="tl-item" data-stop="coricancha"><span class="tl-dot"></span><div class="tl-time">27 jul · manhã · opcional</div><div class="tl-title">Coricancha (Qorikancha) · Templo do Sol</div><div class="tl-desc">A poucas quadras da Plaza, terreno plano — fácil mesmo no dia de aclimatação. O <b>Coricancha</b> era o <b>templo mais sagrado do império inca</b>, todo revestido de ouro; os espanhóis ergueram por cima o convento de Santo Domingo, e hoje vê-se a impressionante <b>cantaria inca</b> sustentando a construção colonial. Casa direto com o que vemos no Museo Larco e na aba "Sobre o Peru".</div></div>
+          <div class="tl-item meal" data-stop="aura"><span class="tl-dot"></span><div class="tl-time">27 jul · 13h · almoço · reservado</div><div class="tl-title">Aura — rooftop com vista</div><div class="tl-desc">Almoço no <b>Aura</b>, rooftop com <b>vista panorâmica de Cusco</b> — parada tranquila para ver a cidade do alto, sem esforço nenhum, perfeita para o dia de aclimatação. Ambiente lindo; a fama é mais pela vista e pelo clima do que pela cozinha, então sem pressa.</div></div>
+          <div class="tl-item" data-stop="plazacusco"><span class="tl-dot"></span><div class="tl-time">27 jul · tarde · opcional</div><div class="tl-title">Plaza de Armas de Cusco</div><div class="tl-desc">O coração de Cusco, plana e a poucos passos do hotel — perfeita para os primeiros passos devagar. Ao redor: a <b>Catedral</b> e a <b>Igreja da Companhia de Jesus</b>, arcadas coloniais e cafés com sacada para ver o movimento. Ótimo para sentar, tomar um mate de coca e ver a cidade passar, sem esforço nenhum.</div></div>
+          <div class="tl-item meal" data-stop="kion"><span class="tl-dot"></span><div class="tl-time">27 jul · 19h · jantar · reservado</div><div class="tl-title">Kion — chifa peruano-chinês leve</div><div class="tl-desc">Jantar leve e <b>econômico</b> no <b>Kion</b>: cozinha peruano-chinesa (chifa) quente e reconfortante — sopas, macarrão saltado, wontons. Pertinho da Plaza (Triunfo 370), fácil de chegar do hotel. Preço acessível e leve no estômago, ideal enquanto o corpo ainda se ajusta à altitude.</div></div>
+        </div>
+      </div></div>
+    </article>
+
+    <article class="day" data-map="dcusco28" style="--zone:var(--terra)">
+      <div class="day-head" onclick="selectDay(this)">
+        <div class="day-date"><span class="dnum">28</span><span class="dmon">jul</span></div>
+        <div class="day-info"><div class="dweek">Terça · Día de la Independencia</div><h3>Fiestas Patrias em Cusco 🇵🇪</h3><div class="dzone"><span class="dot d-cusco"></span>Centro de Cusco · a pé</div></div>
+        <span class="day-badge b-fest">🇵🇪 Fiestas Patrias</span><span class="chev">⌄</span>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="callout"><div class="co-t">🇵🇪 A maior data cívica do Peru</div><p>O 28 de julho é o <b>Día de la Independencia</b>, e Cusco vive isso intensamente. Um dia inteiro na cidade, a pé, entre desfile, festival gastronômico e mirantes — sem esforço grande, respeitando a altitude.</p></div>
+        <div class="tl">
+          <div class="tl-item" data-stop="plazacusco"><span class="tl-dot"></span><div class="tl-time">28 jul · manhã</div><div class="tl-title">🇵🇪 Fiestas Patrias · desfile na Plaza de Armas</div><div class="tl-desc">Hoje é o <b>Día de la Independencia</b> — a maior data cívica do Peru, e Cusco vive isso de forma intensa. Manhã: <b>desfile cívico-militar na Plaza de Armas</b>, com escolas, forças armadas e representantes das 13 províncias do departamento em danças típicas (Capac Chuncho, Marinera, Ukuku). Cheguem cedo para pegar bom lugar. Levar bandeira do Peru (vendem no Mercado San Pedro por poucos soles) é ótimo pro Ravi e a Isadora.</div></div>
+          <div class="tl-item fest" data-stop="regocijo"><span class="tl-dot"></span><div class="tl-time">28 jul · meio-dia</div><div class="tl-title">Festival gastronômico na Plaza Regocijo</div><div class="tl-desc">Do desfile, seguem para a <b>Plaza Regocijo</b> (2 quadras da Plaza de Armas), onde acontece o festival gastronômico das Fiestas Patrias. <b>Comidas típicas cusqueñas</b> para petiscar: chiri uchu (prato símbolo das celebrações, com galinha, cuy, queijo e milho), lechón, tamales, doces regionais. Danças ao vivo, música e artesãos. Petisquem com moderação — o almoço é mais tarde.</div></div>
+          <div class="tl-item" data-stop="sanpedro"><span class="tl-dot"></span><div class="tl-time">28 jul · início da tarde</div><div class="tl-title">Mercado San Pedro</div><div class="tl-desc">Descendo do Regocijo, o <b>Mercado San Pedro</b> (o mais antigo de Cusco, com estrutura projetada por Gustave Eiffel, o mesmo da Torre) — jugos naturais, chocolates, queijos e souvenirs a preços justos. Bom lugar para <b>folhas e balas de coca</b> e para a bandeirinha do Peru.</div></div>
+          <div class="tl-item meal" data-stop="chicha"><span class="tl-dot"></span><div class="tl-time">28 jul · 15h · almoço · reservado</div><div class="tl-title">Chicha por Gastón Acurio</div><div class="tl-desc">Almoço no <b>Chicha</b> — <b>reserva confirmada: 15h, 11 pessoas</b>, restaurante do <b>Gastón Acurio</b> (o chef peruano mais famoso do mundo), na <b>Plaza Regocijo</b> — ao lado de onde foi o festival. Peruano contemporâneo bem executado, com opções leves (peixes, entradas, ravioli). Nota 4.4, ambiente elegante mas familiar. <b>Reservar com antecedência</b>, ainda mais em feriado nacional.</div></div>
+        
+          <div class="tl-item" data-stop="sanblas"><span class="tl-dot"></span><div class="tl-time">28 jul · tarde · escolham na hora</div><div class="tl-title">San Blas e arredores · o que dá para encaixar</div><div class="tl-desc">Depois do almoço, a tarde é de subir devagar por <b>San Blas</b>, o bairro mais charmoso de Cusco — ladeiras de pedra, ateliês de artesãos e casinhas brancas com sacadas azuis. Abaixo, tudo o que dá para ver por ali, do mais fácil ao mais puxado: <b>escolham na hora</b>, conforme o fôlego e o horário. Ninguém precisa fazer tudo.
+            <ul class="subs">
+              <li><b>Pedra dos 12 Ângulos</b> <a class="s-map" href="https://www.google.com/maps/search/?api=1&amp;query=Piedra%20de%20los%2012%20angulos%20Cusco" target="_blank" rel="noopener">📍 Maps</a><span class="s-meta">Rua Hatun Rumiyoc, no caminho da Plaza para San Blas. De graça, leva 5 minutos — o símbolo do perfeccionismo inca, encaixada sem argamassa.</span></li>
+              <li><b>Calle 7 Borreguitos</b> <a class="s-map" href="https://www.google.com/maps/search/?api=1&amp;query=Calle%207%20Borreguitos%20Cusco" target="_blank" rel="noopener">📍 Maps</a><span class="s-meta">Ruazinha estreita de pedra com casinhas coloridas — das mais fotogênicas da cidade. Parada rápida, só para as fotos.</span></li>
+              <li><b>Acueducto de Sapantiana</b> <a class="s-map" href="https://www.google.com/maps/search/?api=1&amp;query=Acueducto%20de%20Sapantiana%20Cusco" target="_blank" rel="noopener">📍 Maps</a><span class="s-meta">Logo acima de San Blas: arcos coloniais de pedra em meio ao verde, quase sem turistas. Subida um pouco mais puxada.</span></li>
+              <li><b>Sacsayhuamán</b> · precisa do Boleto Turístico <a class="s-map" href="https://www.google.com/maps/search/?api=1&amp;query=Sacsayhuaman%20Cusco" target="_blank" rel="noopener">📍 Maps</a><span class="s-meta">A grande fortaleza inca, 2 km acima da Plaza: muralhas com blocos de até 125 toneladas encaixados sem argamassa, e vista panorâmica de Cusco. <b>Não se paga na entrada</b> — é preciso o Boleto Turístico (parcial ~70 soles, comprado antes). Melhor ir de táxi (poucos soles) e descer a pé até o mirante.</span></li>
+              <li><b>Cristo Blanco + Mirador San Cristóbal</b> · pôr do sol 🌅 <a class="s-map" href="https://www.google.com/maps/search/?api=1&amp;query=Mirador%20de%20San%20Cristobal%20Cusco" target="_blank" rel="noopener">📍 Maps</a><span class="s-meta">O fecho da tarde: vista panorâmica de Cusco lá do alto, com os telhados vermelhos e a Plaza se iluminando conforme o sol desce. Fica logo abaixo de Sacsayhuamán, dá para emendar. Levem casaco — esfria rápido.</span></li>
+            </ul>
+          </div></div>
+          <div class="tl-item" data-stop="local"><span class="tl-dot"></span><div class="tl-time">28 jul · noite · jantar livre</div><div class="tl-title">Jantar livre pela cidade</div><div class="tl-desc">Depois de um almoço tardio e reforçado, o jantar fica <b>livre</b> — cada família come algo leve no seu ritmo, onde estiver com vontade. A cidade fica animada até tarde com <b>fogos e serenatas na Plaza de Armas</b>, então vale só circular e beliscar algo pelo caminho. <b>Se quiserem uma opção sentada:</b> o <b>LOCAL</b>, em San Blas, é ótimo — ambiente charmoso e aconchegante, com massas, carnes, pizzas e drinks muito elogiados.</div></div>
+          <div class="tl-item" data-stop="orion"><span class="tl-dot"></span><div class="tl-time">28 jul · noite · antes de dormir</div><div class="tl-title">🛒 Supermercado · abastecer de snacks</div><div class="tl-desc">Aproveitem a última noite em Cusco antes dos dias com a agência para <b>abastecer de snacks</b>: os dias 29 e 30 (Vale Sagrado, trem, Machu Picchu) são longos, com horários apertados e poucas paradas — e em Águas Calientes e na cidadela tudo custa bem mais caro. Levem <b>barrinhas de cereal, castanhas, frutas secas, chocolate, biscoitos e água</b>. O <b>Orion</b> (Av. Garcilaso, ao lado do Mercado San Pedro) é o supermercado mais central; há também minimercados abertos até tarde perto da Plaza. Não esqueçam repor as <b>balas de coca</b>.</div></div>
+    
+        </div>
+      </div></div>
+</article>
+
+    <article class="day" data-map="dcusco29" style="--zone:var(--terra)">
+      <div class="day-head" onclick="selectDay(this)">
+        <div class="day-date"><span class="dnum">29</span><span class="dmon">jul</span></div>
+        <div class="day-info"><div class="dweek">Quarta · com a agência 🇧🇷</div><h3>Vale Sagrado dos Incas 🚆</h3><div class="dzone"><span class="dot d-cusco"></span>Pisac → Ollantaytambo → Águas Calientes</div></div>
+        <span class="day-badge b-travel">🚆 Vale Sagrado</span><span class="chev">⌄</span>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="callout"><div class="co-t">🇧🇷 Roteiro guiado em português</div><p>Dia inteiro no Vale Sagrado com a agência: Pisac, almoço em Urubamba e Ollantaytambo, terminando com o trem até Águas Calientes para pernoite ao pé de Machu Picchu. Todos os traslados, ingressos e o almoço já estão incluídos.</p></div>
+        <div class="tl">
+          <div class="tl-item travel" data-stop="pisac"><span class="tl-dot"></span><div class="tl-time">29 jul · manhã · com a agência 🇧🇷</div><div class="tl-title">Vale Sagrado · Pisac (sítio + mercado)</div><div class="tl-desc">Saída cedo de Cusco rumo ao <b>Vale Sagrado dos Incas</b>, com guia em português. Parada no <b>mirante de Taray</b> para a primeira vista do vale e do rio Urubamba lá embaixo. Em seguida, visita monitorada ao <b>Centro Arqueológico de Pisac</b> — os famosos terraços incas cravados na encosta da montanha. Depois, tempo livre no <b>Mercado Artesanal de Pisac</b>, um dos mais coloridos dos Andes (tecidos, prata, cerâmica).</div></div>
+          <div class="tl-item meal"><span class="tl-dot"></span><div class="tl-time">29 jul · almoço · Urubamba</div><div class="tl-title">Almoço buffet no Vale <span class="cost">incluído</span></div><div class="tl-desc">Parada em <b>Urubamba</b>, no coração do Vale, para o <b>almoço buffet</b> já incluído no pacote (variedade de pratos andinos, com água inclusa). Momento de recarregar antes de seguir para Ollantaytambo.</div></div>
+          <div class="tl-item travel" data-stop="ollanta"><span class="tl-dot"></span><div class="tl-time">29 jul · tarde</div><div class="tl-title">Ollantaytambo · fortaleza inca</div><div class="tl-desc">Última parada do Vale: a monumental <b>fortaleza de Ollantaytambo</b>, com seus terraços gigantes que serviam como centro militar, religioso e agrícola. O povoado aos pés dela é uma das poucas cidades que <b>ainda mantém o traçado urbano inca original</b> — ruazinhas de pedra e canais de água correndo pelo meio. Visita guiada em português.</div></div>
+          <div class="tl-item travel"><span class="tl-dot"></span><div class="tl-time">29 jul · fim de tarde · 🚆 trem</div><div class="tl-title">Trem Ollantaytambo → Águas Calientes <span class="cost">~1h45</span></div><div class="tl-desc">Embarque no <b>trem turístico</b> em Ollantaytambo: são <b>cerca de 1h45 de viagem</b>, acompanhando o rio Urubamba montanha adentro até <b>Águas Calientes</b>, o povoado ao pé de Machu Picchu. A equipe da agência recebe na estação e leva ao hotel. <b>Pernoite em Águas Calientes</b> (café da manhã incluído) — bem pertinho da cidadela para a subida cedo no dia seguinte.</div></div>
+          <div class="tl-item meal" data-stop="mapacho"><span class="tl-dot"></span><div class="tl-time">29 jul · 19h30 · jantar · reservado</div><div class="tl-title">Mapacho Craft Beer & Restaurant</div><div class="tl-desc">Jantar em Águas Calientes no <b>Mapacho</b> — <b>reserva confirmada: 19h30, 11 pessoas</b> (Av. Imperio de los Incas 614), <b>à beira do rio Vilcanota</b> e ao lado da linha do trem — a cervejaria artesanal da cidade, com nota altíssima e ótimo custo-benefício para o lugar. Cozinha peruana andina: trucha, alpaca, ceviche, quinoa, além de opções vegetarianas e sem glúten. Música ao vivo e ambiente descontraído. Bom jantar para <b>dormir cedo</b>: no dia seguinte a subida a Machu Picchu é de madrugada.</div></div>
+    
+        </div>
+      </div></div>
+</article>
+
+    <article class="day" data-map="dcusco30" style="--zone:var(--terra)">
+      <div class="day-head" onclick="selectDay(this)">
+        <div class="day-date"><span class="dnum">30</span><span class="dmon">jul</span></div>
+        <div class="day-info"><div class="dweek">Quinta · com a agência + despedida</div><h3>Machu Picchu ⛰️</h3><div class="dzone"><span class="dot d-cusco"></span>Machu Picchu → Cusco</div></div>
+        <span class="day-badge b-travel">⛰️ Machu Picchu</span><span class="chev">⌄</span>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="callout"><div class="co-t">⛰️ O ápice da viagem</div><p>Manhã na cidadela inca de Machu Picchu com guia privado em português, almoço em Águas Calientes e volta de trem panorâmico a Cusco. À noite, jantar de despedida dos Andes na Cicciolina, cozinha ítalo-peruana de autor no centro histórico — uma das mesas mais concorridas de Cusco e um fecho leve para a última noite em altitude.</p></div>
+        <div class="tl">
+          <div class="tl-item travel" data-stop="machu"><span class="tl-dot"></span><div class="tl-time">30 jul · manhã · guia privado 🇧🇷</div><div class="tl-title">Machu Picchu · a cidadela inca ⛰️</div><div class="tl-desc"><b>O momento mais esperado da viagem.</b> Bem cedo, a equipe acompanha do hotel até o ônibus que sobe a estrada em ziguezague até a entrada. <b>Visita guiada privada em português</b> à Cidadela Inca de Machu Picchu — o guia conduz pelos setores, mistérios e histórias da cidade perdida. Depois, <b>tempo livre</b> para explorar e fotografar no seu ritmo. O guia orienta o horário de descida a Águas Calientes.</div></div>
+          <div class="tl-item meal" data-stop="fullhouse"><span class="tl-dot"></span><div class="tl-time">30 jul · 14h · almoço · reservado</div><div class="tl-title">Full House Machupicchu Restaurant</div><div class="tl-desc">Almoço em Águas Calientes depois de descer de Machu Picchu, antes do trem de volta a Cusco. Fica <b>à beira do rio Vilcanota</b> (Imperio de los Incas 620), coladinho na <b>estação de trem</b> — prático demais para o horário. Cozinha peruana muito bem avaliada (nota ~4.8): ceviche de trucha, ají de gallina, alpaca, e até pizza para as crianças. Vista do rio e música ao vivo.</div></div>
+          <div class="tl-item travel"><span class="tl-dot"></span><div class="tl-time">30 jul · tarde · 🚆 trem de volta</div><div class="tl-title">Trem Vistadome → Cusco</div><div class="tl-desc">Volta de trem no <b>Vistadome Observatory</b> (vagão panorâmico, com janelas no teto) de Águas Calientes até a estação de Ollantaytambo/Poroy, e de lá <b>traslado privado</b> até o hotel em Cusco. Chegada a tempo de descansar antes do jantar de despedida.</div></div>
+          <div class="tl-item fest" data-stop="cicciolina"><span class="tl-dot"></span><div class="tl-time">30 jul · 19h · jantar despedida · a reservar</div><div class="tl-title">Cicciolina — despedida ítalo-peruana</div><div class="tl-desc">Jantar de despedida dos Andes na <b>Cicciolina</b> (Calle Palacio 110, a um quarteirão da Plaza de Armas, nota 4.6 com ~2.500 avaliações): cozinha <b>ítalo-peruana de autor</b> — massas frescas, forno a lenha, ceviches, trucha e alpaca, num salão pequeno e aconchegante. Mais leve que a cocina cusqueña pesada, o que ajuda na última noite em altitude. <b>Reserva é essencial</b>: o salão é pequeno e enche todo dia — para 11 pessoas, quanto antes melhor. Cozinha até 21h15.</div></div>
         </div>
       </div></div>
     </article>
@@ -380,37 +524,36 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
         <span class="day-badge b-fest">🎂 Cássia · 72</span><span class="chev">⌄</span>
       </div>
       <div class="day-body"><div class="day-body-inner">
-        <div class="callout"><div class="co-t">🎂 A noite da Cássia (72 anos)</div><p>Dia de chegar e descansar — vocês voltam cansados de Cusco/Machu Picchu. Tarde livre no hotel e só a comemoração à noite: comida típica aconchegante + uma surpresa organizada por vocês (sobremesa com vela, brinde, algo simbólico do Brasil).</p></div>
+        <div class="callout"><div class="co-t">🎂 A noite da Cássia (72 anos)</div><p>Dia de chegar e descansar — vocês voltam cansados de Cusco/Machu Picchu. Tarde livre no hotel e só a comemoração à noite: jantar reservado às 18h na La Rosa Náutica, sobre o píer, pegando o pôr do sol sobre o Pacífico.</p></div>
         <div class="tl">
           <div class="tl-item" data-stop="aero"><span class="tl-dot"></span><div class="tl-time">12:15 · pouso</div><div class="tl-title">Chegada a Lima (aeroporto Jorge Chávez)</div><div class="tl-desc">Vindos de Cusco, cansados da viagem. Transfer direto ao hotel e almoço leve.</div></div>
           <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> aeroporto → hotel (~45 min)</div>
-          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">Tarde · livre</div><div class="tl-title">Descanso no Crowne Plaza</div><div class="tl-desc">Tarde reservada para recuperar o fôlego — cochilo, piscina, ou uma volta curta pelo bairro. Sem programação, para chegar inteiros à comemoração da noite.</div></div>
-          <div class="tl-item" data-stop="dedalo"><span class="tl-dot"></span><div class="tl-time">18:00 · opcional</div><div class="tl-title">Dédalo Arte e Artesanato <span class="cost">Barranco</span></div><div class="tl-desc">Para quem estiver com energia antes do jantar: galeria-loja de artesanato de autor numa casona antiga de Barranco, com café no jardim dos fundos. Fica pertinho do Mérito. Ótimo para as últimas lembranças especiais.</div></div>
-          <div class="tl-item fest" data-stop="merito"><span class="tl-dot"></span><div class="tl-time">20:00 · jantar 🎂</div><div class="tl-title">Mérito <span class="cost">autoral · Barranco</span></div><div class="tl-desc">Restaurante autoral celebrado (de cozinha venezuelano-peruana), um dos mais aclamados de Lima — uma noite especial à altura da Cássia. <b>Reservem com bastante antecedência</b> (lota rápido) e avisem que é aniversário. Fecha aos domingos. (~25 min de Miraflores.)</div></div>
+          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">Tarde · livre</div><div class="tl-title">Descanso nos hotéis</div><div class="tl-desc">Tarde reservada para recuperar o fôlego em cada hotel (Crowne, Swissotel ou Casa Andina) — cochilo, piscina, ou uma volta curta pelo bairro. Sem programação, para chegar inteiros à comemoração da noite.</div></div>
+          <div class="tl-item" data-stop="mercadoindio"><span class="tl-dot"></span><div class="tl-time">16:00 · opcional</div><div class="tl-title">Mercado Indio <span class="cost">Miraflores</span></div><div class="tl-desc">Para quem estiver com energia antes do jantar: o grande mercado de artesanato de Miraflores, com alpaca, cerâmica, prata e tecidos de todo o país. Fica pertinho da Huaca — dá para dar uma passada rápida antes do jantar. Bom para pechinchar e trazer lembranças.</div></div>
+          <div class="tl-item fest" data-stop="rosa"><span class="tl-dot"></span><div class="tl-time">18:00 · jantar 🎂 · reservado</div><div class="tl-title">La Rosa Náutica <span class="cost">72 anos da Cássia</span></div><div class="tl-desc">Celebração dos <b>72 anos da Cássia</b> no restaurante mais icônico de Lima: um salão vitoriano <b>sobre um píer no Pacífico</b> (Circuito de Playas, espigón 4, Miraflores). Chegando às 18h, vocês pegam o <b>pôr do sol sobre o mar</b> pelas janelas — o momento mágico da casa. Cozinha peruana clássica, frutos do mar e o famoso <b>Suspiro Limeño</b> de sobremesa. <b>Reserva confirmada: 18h, 10 pessoas</b>, já avisada como aniversário. Fica pertinho dos hotéis, ótimo depois do dia de viagem de Cusco.</div></div>
         </div>
       </div></div>
     </article>
 
-    <article class="day" data-map="d01" style="--zone:var(--sky)">
+    <article class="day" data-map="d01" style="--zone:var(--teal)">
       <div class="day-head" onclick="selectDay(this)">
         <div class="day-date"><span class="dnum">01</span><span class="dmon">ago</span></div>
-        <div class="day-info"><div class="dweek">Sábado · dia livre</div><h3>Miraflores à beira-mar</h3><div class="dzone"><span class="dot d-mira"></span>Miraflores</div></div>
+        <div class="day-info"><div class="dweek">Sábado · Barranco o dia todo</div><h3>Barranco + aniversário do Dani 🎂</h3><div class="dzone"><span class="dot d-barranco"></span>Barranco&nbsp;→&nbsp;<span class="dot d-mira"></span>Miraflores</div></div>
         <span class="day-badge b-fest">🎂 Dani · 70</span><span class="chev">⌄</span>
       </div>
       <div class="day-body"><div class="day-body-inner">
-        <div class="callout"><div class="co-t">🎂 Celebração dos 70 anos do Dani</div><p>A última grande noite da viagem é a comemoração do aniversário do Dani, na <b>La Rosa Náutica</b> — sobre o píer, em Miraflores, com vista para o mar. Reservem com antecedência e avisem que é aniversário.</p></div>
+        <div class="callout"><div class="co-t">🎂 Barranco o dia todo, celebração dos 70 do Dani à noite</div><p>Último dia inteiro em Lima dedicado ao bairro mais charmoso da cidade — Barranco. Ritmo tranquilo, sem correria, com almoço na Isolina. À noite, jantar reservado às 19h30 no Huaca Pucllana, com a pirâmide iluminada ao lado das mesas.<b>Barranco</b>. Ritmo tranquilo, sem correria, com almoço na Isolina no coração do bairro. No fim da tarde, deslocamento para <b>Miraflores</b> para o jantar de aniversário do Dani na <b>La Rosa Náutica</b>, sobre o píer, chegando a tempo do pôr do sol.</p></div>
         <div class="tl">
-          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">10:00 · saída</div><div class="tl-title">Crowne Plaza</div><div class="tl-desc">Último dia inteiro em Lima, todo em Miraflores — tudo pertinho do hotel, dá pra ir a pé ou em táxis rápidos.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> poucos minutos até Larcomar</div>
-          <div class="tl-item" data-stop="larcomar"><span class="tl-dot"></span><div class="tl-time">10:30</div><div class="tl-title">Larcomar <span class="cost">lojas chique</span></div><div class="tl-desc">Shopping a céu aberto na falésia, sobre o mar. Lojas de alpaca e prata de qualidade, café/sorvete e mirantes com vista para o Pacífico.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> caminhada de ~10 min pelo Malécon</div>
-          <div class="tl-item" data-stop="amor"><span class="tl-dot"></span><div class="tl-time">11:30</div><div class="tl-title">Parque del Amor + Malecón de Miraflores</div><div class="tl-desc">No alto da falésia: mosaicos estilo Gaudí e a escultura "El Beso", com vista do Pacífico. Parque linear plano, lindo para caminhar com o grupo todo.</div></div>
-          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~5 min até o Delfino Mar</div>
-          <div class="tl-item meal" data-stop="delfino"><span class="tl-dot"></span><div class="tl-time">13:00 · almoço</div><div class="tl-title">Delfino Mar <span class="cost">cevicheria</span></div><div class="tl-desc">Cevicheria querida em Miraflores: ceviche fresco, peixe do dia e frutos do mar, com ótimo custo-benefício e ambiente tranquilo. Almoço marinho à altura do último dia.</div></div>
-          <div class="callout" style="margin:6px 0"><div class="co-t">🌤️ Tarde livre</div><p>Depois do almoço, a tarde fica <b>livre</b>: quem quiser explora por conta. Duas sugestões pertinho — mas sintam-se à vontade para descansar no hotel, voltar ao mar ou conhecer o que quiserem.</p></div>
-          <div class="tl-item" data-stop="huaca"><span class="tl-dot"></span><div class="tl-time">15:30 · opcional</div><div class="tl-title">Huaca Pucllana <span class="cost">~15 soles</span></div><div class="tl-desc">Pirâmide pré-inca de adobe (cultura Lima, ~500 d.C.) no meio do bairro, com visita guiada de ~40–60 min. Surpreende ver um sítio arqueológico cercado de prédios. Tem um <b>mini-zoológico</b> com animais andinos (lhamas, cuís, aves), que agrada bastante as crianças. Lima tem outras huacas parecidas, caso queiram explorar: a <b>Huaca Huallamarca</b> (San Isidro), a <b>Huaca Mateo Salado</b> (Breña) e a <b>Huaca Santa Catalina</b> (La Victoria) — mas a Pucllana é a mais completa e bem conservada.</div></div>
-          <div class="tl-item" data-stop="mercadoindio"><span class="tl-dot"></span><div class="tl-time">16:30 · opcional</div><div class="tl-title">Mercado Indio <span class="cost">artesanato</span></div><div class="tl-desc">Para as últimas lembranças: alpaca, cerâmica e presentes a bons preços. Pechinchem. Aberto até a noite.</div></div>
-          <div class="tl-item fest" data-stop="rosa"><span class="tl-dot"></span><div class="tl-time">20:00 · jantar 🎂</div><div class="tl-title">La Rosa Náutica (celebração do Dani)</div><div class="tl-desc">Última grande noite: jantar sobre o píer, vista para o mar, ambiente estilo Titanic. Reservem com antecedência e avisem que é aniversário. Peçam o Suspiro Limeño.</div></div>
+          <div class="tl-item" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">10:00 · saída</div><div class="tl-title">Saída dos hotéis · Crowne · Swissotel · Casa Andina</div><div class="tl-desc">Barranco fica coladinho em Miraflores — uns 10 min de carro dos três hotéis. Cada família sai direto do seu hotel; o encontro é no Dédalo.</div></div>
+          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~10 min até o Dédalo</div>
+          <div class="tl-item" data-stop="dedalo"><span class="tl-dot"></span><div class="tl-time">10:30</div><div class="tl-title">Dédalo Arte e Artesanato <span class="cost">café + galeria</span></div><div class="tl-desc">Começamos o dia numa das joias de Barranco: galeria-loja de artesanato de autor numa casona antiga, com <b>café no jardim dos fundos</b>. Peças únicas de design peruano contemporâneo — bom lugar para o café da manhã tardio ou um lanche, e boas lembranças da viagem.</div></div>
+          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> caminhada curta até o Puente de los Suspiros</div>
+          <div class="tl-item" data-stop="suspiros"><span class="tl-dot"></span><div class="tl-time">11:30</div><div class="tl-title">Puente de los Suspiros</div><div class="tl-desc">A ponte mais icônica de Barranco. Ótima para fotos do grupo. Vale descer a Bajada de Baños, a ladeira de murais que leva até o mar.</div></div>
+          <div class="tl-item" data-stop="mirador"><span class="tl-dot"></span><div class="tl-time">12:00</div><div class="tl-title">Mirador Catalina Recavarren</div><div class="tl-desc">Mirante sossegado sobre a falésia, com vista para a praia de Barranco e o Pacífico. Ótimo para sentar, ouvir o mar e tirar fotos longe das multidões.</div></div>
+          <div class="tl-item meal" data-stop="isolina"><span class="tl-dot"></span><div class="tl-time">13:00 · almoço</div><div class="tl-title">Isolina Taberna <span class="cost">criolla · Barranco</span></div><div class="tl-desc">Taberna criolla aconchegante e premiada, no coração de Barranco. Porções generosas para dividir — comida caseira peruana de verdade (arroz con pato, ají de gallina, causa). Uma das experiências mais autênticas de comer em Lima.</div></div>
+          <div class="tl-item" data-stop="malbarranco"><span class="tl-dot"></span><div class="tl-time">15:30</div><div class="tl-title">Malecón de Barranco + tempo livre no bairro</div><div class="tl-desc">Depois do almoço, tempo livre para explorar Barranco no seu ritmo: o Malécon com vista para o mar, cafés como La Bodega Verde ou Café Ancestral para uma pausa, um passeio pelas ruazinhas de casarões coloridos. Quem quiser voltar antes ao hotel para uma sesta antes do jantar, também faz sentido. <b>Não deixem de reparar na arte urbana:</b> Barranco é famosa pelos <b>murais</b> que cobrem as fachadas das ruas ao redor do Puente de los Suspiros — Bajada de Baños, Jirón Domeyer e Jirón Cajamarca concentram os maiores e mais coloridos. Vale caminhar sem destino, é um museu a céu aberto.</div></div>
+          <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> ~15 min de carro de Barranco até o Huaca Pucllana (Miraflores)</div>
+          <div class="tl-item fest" data-stop="huacarest"><span class="tl-dot"></span><div class="tl-time">19:30 · jantar 🎂 · reservado</div><div class="tl-title">Restaurant Huaca Pucllana <span class="cost">70 anos do Dani</span></div><div class="tl-desc">Um dos jantares mais únicos de Lima, para fechar a viagem celebrando os <b>70 anos do Dani</b>: o restaurante fica <b>dentro do sítio arqueológico</b>, com a pirâmide pré-inca de adobe <b>iluminada à noite</b> ao lado das mesas. Cozinha peruana de autor (ceviches, peixes, lomo saltado), ambiente elegante. <b>Reserva confirmada: 19h30, 11 pessoas, mesa na terraça com vista para as ruínas</b>, já avisada como aniversário. Fica em Miraflores, a poucos minutos dos hotéis.</div></div>
         </div>
       </div></div>
     </article>
@@ -424,7 +567,7 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
       <div class="day-body"><div class="day-body-inner">
         <div class="callout"><div class="co-t">✈️ Voo cedo — 9h25</div><p>Com o voo às 9h25, é preciso estar no aeroporto por volta das <b>6h30–7h</b>. Não há tempo para passeio: café no hotel e transfer direto. Deixem as malas prontas na noite anterior.</p></div>
         <div class="tl">
-          <div class="tl-item meal" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">~5h30 · café</div><div class="tl-title">Café no Crowne Plaza</div><div class="tl-desc">Café da manhã cedo no hotel (ou room service / caixa para viagem, se ainda não estiver aberto).</div></div>
+          <div class="tl-item meal" data-stop="crowne"><span class="tl-dot"></span><div class="tl-time">~5h30 · café</div><div class="tl-title">Café da manhã nos hotéis</div><div class="tl-desc">Café da manhã cedo em cada hotel (ou room service / caixa para viagem, se ainda não estiver aberto).</div></div>
           <div class="move"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Transfer Miraflores → aeroporto (~45 min) · cheguem ~6h45</div>
           <div class="tl-item travel" data-stop="aero"><span class="tl-dot"></span><div class="tl-time">09:25 · voo</div><div class="tl-title">Voo Lima → São Paulo (aeroporto Jorge Chávez)</div><div class="tl-desc">Voo internacional — antecedência de ~2h30. Fim da viagem!</div></div>
         </div>
@@ -433,6 +576,23 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
 
   </div>
 </div>
+
+<section class="resv">
+  <div class="resv-head">
+    <div class="g-tag">Nossas reservas</div>
+    <h2>🍽️ Mesas reservadas, dia a dia</h2>
+    <p>Todas as reservas já confirmadas da viagem. Clique no nome do restaurante para ver no mapa. Onde não há reserva, o combinado é decidir na hora.</p>
+  </div>
+  <div class="resv-scroll">
+    <table class="resv-t">
+      <thead><tr><th class="rowh"></th><th>25 jul<span class="rd-w">Sáb</span></th><th>26 jul<span class="rd-w">Dom</span></th><th>27 jul<span class="rd-w">Seg</span></th><th>28 jul<span class="rd-w">Ter</span></th><th>29 jul<span class="rd-w">Qua</span></th><th>30 jul<span class="rd-w">Qui</span></th><th>31 jul<span class="rd-w">Sex</span></th><th>01 ago<span class="rd-w">Sáb</span></th></tr></thead>
+      <tbody>
+        <tr><th class="rowh">🥘 Almoço</th><td><span class="rv" onclick="goToMapStop('larcocafe')">Café del Museo Larco</span><span class="rv-meta">Lima · Pueblo Libre</span><span class="rv-time">13h00 · 10 pessoas</span></td><td><span class="rv-free">sem reserva · opcional</span></td><td><span class="rv" onclick="goToMapStop('aura')">Aura</span><span class="rv-meta">Cusco · rooftop</span><span class="rv-time">13h00 · 11 pessoas</span></td><td><span class="rv" onclick="goToMapStop('chicha')">Chicha por Gastón Acurio</span><span class="rv-meta">Cusco · Plaza Regocijo</span><span class="rv-time">15h00 · 11 pessoas</span></td><td><span class="rv-free">incluído no pacote</span></td><td><span class="rv" onclick="goToMapStop('fullhouse')">Full House</span><span class="rv-meta">Águas Calientes</span><span class="rv-time">14h00 · 11 pessoas</span></td><td><span class="rv-none">—</span></td><td><span class="rv" onclick="goToMapStop('isolina')">Isolina Taberna</span><span class="rv-meta">Lima · Barranco</span><span class="rv-time">13h00 · a confirmar</span></td></tr>
+        <tr><th class="rowh">🌙 Jantar</th><td><span class="rv-free">sem reserva</span></td><td><span class="rv-free">sem reserva</span></td><td><span class="rv" onclick="goToMapStop('kion')">Kion</span><span class="rv-meta">Cusco · perto da Plaza</span><span class="rv-time">19h00 · 11 pessoas</span></td><td><span class="rv-free">jantar livre</span></td><td><span class="rv" onclick="goToMapStop('mapacho')">Mapacho Craft Beer</span><span class="rv-meta">Águas Calientes</span><span class="rv-time">19h30 · 11 pessoas</span></td><td><span class="rv" onclick="goToMapStop('cicciolina')">Cicciolina</span><span class="rv-meta">Cusco · centro histórico</span><span class="rv-time">19h00 · 11 pessoas · a confirmar</span></td><td><span class="rv" onclick="goToMapStop('rosa')">La Rosa Náutica 🎂</span><span class="rv-meta">Lima · Miraflores</span><span class="rv-time">18h00 · 10 pessoas</span></td><td><span class="rv" onclick="goToMapStop('huacarest')">Huaca Pucllana 🎂</span><span class="rv-meta">Lima · Miraflores</span><span class="rv-time">19h30 · 11 pessoas</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <section class="guide">
   <div class="guide-head">
@@ -575,12 +735,133 @@ body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);li
   </div>
 </div><!-- /page-historia -->
 
+<div id="page-checklist" class="page">
+  <div class="ck-wrap">
+    <div class="ck-hero">
+      <div class="g-tag">Antes de embarcar</div>
+      <h2>🎒 Checklist da viagem</h2>
+      <p>Tudo o que precisa ir na mala, no bolso e no celular — organizado por tema. Clique nos itens para ir marcando conforme arrumar. <b>As marcações ficam salvas automaticamente no seu aparelho</b> — pode fechar o site e voltar depois. Cada pessoa tem a sua própria lista: o que você marca no seu celular não aparece no de ninguém.</p>
+    </div>
+    <div class="ck-total">
+      <b id="ckPct">0%</b>
+      <span class="bar"><i id="ckBar"></i></span>
+      <span id="ckTxt" style="font-size:.8rem;color:var(--ink-soft)"></span>
+      <span id="ckSaveTxt" class="ck-save"></span>
+      <button onclick="ckReset()">limpar tudo</button>
+    </div>
+    <div class="ck-grid"><div class="ck-card" style="--cc:var(--gold)"><h3>📄 Documentos e reservas<span class="ck-count">0/8</span></h3><p class="ck-sub">O que precisa estar impresso ou salvo no celular.</p><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">RG original com menos de 10 anos ou passaporte válido<small>Brasileiros entram no Peru com RG, desde que a emissão tenha menos de 10 anos. Para Machu Picchu, leve o documento sempre — é conferido na entrada da cidadela.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Passagens aéreas de ida e volta<small>Impressas ou salvas offline no celular.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Comprovantes de reserva dos hotéis<small>Crowne Plaza, Swissotel, Casa Andina, Yawar Inka e o hotel da agência em Águas Calientes.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Voucher da excursão Vale Sagrado + Machu Picchu<small>O bilhete da agência para os dias 29 e 30, com os ingressos e o trem.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Comprovantes dos restaurantes reservados<small>Nove reservas confirmadas — a lista completa está na aba Roteiro.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Seguro viagem contratado<small>Indispensável. De preferência com cobertura médica em altitude e repatriação.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Carteirinha de estudante do Pedro e da Isadora<small>Vale dinheiro: no Museo Larco o ingresso de estudante custa S/25 em vez dos S/50 da entrada geral. A Isadora (14) já paga meia como menor de 17, mas o Pedro (18) só consegue a tarifa reduzida apresentando a carteirinha. Vários museus do Peru aceitam carteirinha brasileira ou a ISIC — levem a física, não só a foto.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Cópias digitais de tudo<small>Fotografe documentos e vouchers e guarde numa pasta offline no celular, além de mandar para outra pessoa da família.</small></span></div><div class="ck-note"><b>Dica:</b> como são 4 famílias, vale uma pasta compartilhada no celular com os vouchers de todos — se alguém perder o telefone, os outros têm cópia.</div></div><div class="ck-card" style="--cc:var(--teal)"><h3>💵 Dinheiro<span class="ck-count">0/4</span></h3><p class="ck-sub">No Peru se usa o Sol (S/). Câmbio aproximado: R$ 1,45 por sol.</p><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Soles em espécie<small>Para táxis, mercados, gorjetas, ônibus de Machu Picchu e as barracas do festival. Muita coisa pequena não aceita cartão. <b>Separem notas pequenas:</b> as de 10 e 20 soles resolvem quase tudo — táxis, feiras e barraquinhas raramente têm troco para 100. Ao sacar ou trocar, peçam para quebrar as notas grandes assim que puderem.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Cartão internacional habilitado<small>Cartões globais (Wise, Nomad) ou de crédito liberados para o exterior. Avise o banco sobre a viagem para não bloquear.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Doleira ou pochete discreta<small>Para levar o dinheiro por baixo da roupa em mercados cheios e no desfile do dia 28. Deixem no cofre do hotel o que não for usar no dia.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Saque em caixa eletrônico no Peru<small>Sai mais em conta do que trocar tudo no Brasil. Prefira os caixas do <b>BCP (Banco de Crédito del Perú)</b> ou os <b>Multired</b> do Banco de la Nación — há um a poucos minutos do hotel em Cusco. Evite os caixas <b>Global Net</b> de rua e de lojinha: cobram taxa bem mais alta. <b>Saquem sempre dentro de agência, shopping ou supermercado</b> — nunca em caixa isolado na rua, e de preferência durante o dia. Tirem valores maiores de uma vez para diluir a taxa fixa por operação e guardem parte no cofre do hotel.</small></span></div></div><div class="ck-card" style="--cc:var(--terra)"><h3>💊 Saúde e farmácia<span class="ck-count">0/11</span></h3><p class="ck-sub">O básico para a altitude e para o estômago.</p><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Remédio para altitude receitado pelo médico<small>O Diamox (acetazolamida) é o preventivo mais conhecido e costuma ser iniciado 24h antes de subir. Exige receita: leve do Brasil.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Analgésicos que vocês já usam<small>Ibuprofeno, paracetamol ou dipirona para dor de cabeça — o sintoma mais comum na altitude.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Remédio para enjoo<small>Dramin ou Vonau, úteis também nas estradas de serra do Vale Sagrado.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Farmácia básica de estômago<small>A troca de culinária costuma cobrar o seu preço: leve o que vocês já usam para desconforto intestinal.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Curativos adesivos (band-aids)<small>Para bolhas — vocês vão caminhar muito em pedra irregular.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Protetor labial e soro nasal ou colírio<small>O ar em Cusco e em Machu Picchu é muito seco.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Remédios de uso contínuo<small>Na bagagem de mão, em quantidade suficiente para toda a viagem, com a receita junto.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Protetor solar de alta proteção (fator 50 ou mais)<small>Uso diário, não só em Machu Picchu: a radiação UV em Cusco é muito maior que no Brasil, e o frio engana. Passem no rosto, no pescoço e nas mãos todo dia, mesmo nublado, e reapliquem à tarde.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Repelente<small>Cusco quase não tem mosquito, mas Machu Picchu e Águas Calientes ficam em zona de mata: os borrachudos picam mesmo com frio e a coceira dura dias. Passem sobre o protetor solar, nunca antes.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Lenços umedecidos<small>Resolvem quase tudo em viagem: mãos sujas antes de comer na rua, banheiros de posto e de estação sem papel, criança melecada no trem.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Álcool em gel e máscara leve<small>Úteis em mercados cheios e no avião.</small></span></div><div class="ck-note"><b>Compra no Peru:</b> Sorojchi Pills e ALTI Vital se compram <b>sem receita</b> nas farmácias Inkafarma e Mifarma, várias perto da Plaza e na Av. El Sol. Só atenção: as Sorojchi contêm aspirina — quem já toma anticoagulante ou tem restrição deve preferir paracetamol.</div></div><div class="ck-card" style="--cc:var(--sky)"><h3>🧥 Roupas<span class="ck-count">0/8</span></h3><p class="ck-sub">Julho é inverno e alta temporada seca: sol forte de dia, frio de verdade à noite.</p><div class="ck-note top"><b>A estratégia é vestir em camadas, não uma peça grossa só.</b> A regra dos Andes é camiseta + blusa (ou fleece) + casaco: de manhã cedo faz 2 °C, ao meio-dia o sol bate e sobe para 18-20 °C, e à noite despenca de novo. Com camadas vocês tiram e põem ao longo do dia; com um casacão único, ou se passa calor ou se passa frio. Vale para todas as peças abaixo.</div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Casaco quente para as noites de Cusco<small>Pode chegar perto de 0 °C depois que o sol se põe. É o item que mais faz falta.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Segunda pele (calça e blusa térmicas)<small>Ocupam pouco espaço e resolvem o frio das madrugadas — sobretudo no dia 30, saindo de Águas Calientes de madrugada.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Corta-vento ou jaqueta impermeável<small>Julho é seco, mas em Machu Picchu pode garoar sem aviso.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Gorro, luvas e cachecol<small>Para o desfile de manhã cedo e as noites em Cusco.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Tênis confortável e já amaciado<small>Não precisa bota de trilha — mas o calçado precisa ter boa aderência: as pedras de Cusco e Machu Picchu são irregulares e escorregam.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Óculos de sol e boné ou chapéu<small>O sol na altitude é muito mais forte, mesmo com frio.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Roupa mais arrumada para os aniversários<small>La Rosa Náutica (31/7) e Huaca Pucllana (1/8) são jantares elegantes.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Casaco leve para Lima<small>Lima em julho fica entre 15 e 19 °C, com garoa e muita umidade — cinza o dia todo.</small></span></div></div><div class="ck-card" style="--cc:var(--ink-soft)"><h3>🔌 Eletrônicos<span class="ck-count">0/6</span></h3><p class="ck-sub">Detalhe importante: a rede no Peru é 220V.</p><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Adaptador de tomada universal<small>O Peru usa tomadas tipo A (dois pinos chatos) e C (dois pinos redondos). Muitas aceitam o plugue redondo brasileiro antigo, mas não conte com isso.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Conferir se os aparelhos são bivolt<small>A rede peruana é 220V / 60Hz. Secador de cabelo e chapinha 127V queimam na hora.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Carregador portátil (power bank)<small>Essencial nos dias 29 e 30: são 12h fora do hotel, com muita foto e sem tomada.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Cabos e carregadores de todos<small>Com 11 pessoas, vale levar um filtro de linha pequeno — os quartos costumam ter poucas tomadas.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Fones de ouvido<small>Para os voos e as quase 2h de trem.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Câmera com cartão e bateria extra<small>O frio consome bateria mais rápido.</small></span></div></div><div class="ck-card" style="--cc:var(--terra)"><h3>🎒 Mochila do Vale e de Machu Picchu<span class="ck-count">0/8</span></h3><p class="ck-sub">Dias 29 e 30: a mala grande fica em Cusco. Só vai uma mochila por pessoa.</p><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Mochila pequena, de 15 a 20 litros<small>O trem permite uma bagagem de mão por pessoa. Dentro da cidadela, a regra do Ministério da Cultura é ainda mais rígida: nada maior que 40 x 35 x 20 cm.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Muda de roupa para a noite em Águas Calientes<small>É só uma noite. O resto da bagagem fica guardado no hotel em Cusco.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Documento com foto<small>Conferido na entrada de Machu Picchu — sem ele não se entra.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Snacks comprados no supermercado<small>Barrinhas, castanhas, frutas secas e chocolate. Em Águas Calientes e na cidadela tudo custa muito mais caro.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Garrafa de água reutilizável<small>Levem cheia: hidratação constante ajuda muito na altitude.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Protetor solar e repelente<small>Machu Picchu fica em zona de mata: sol forte e mosquitos borrachudos, que picam mesmo com frio.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Capa de chuva fina para a mochila<small>Ocupa nada e salva a câmera.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Dinheiro trocado<small>Para o ônibus, lembrancinhas e o almoço em Águas Calientes.</small></span></div><div class="ck-note"><b>O que não entra na cidadela:</b> mochilas grandes, tripés, paus de selfie, guarda-chuvas (leve capa de chuva), bebidas alcoólicas e drones sem autorização. Há guarda-volumes na entrada.</div></div><div class="ck-card" style="--cc:var(--teal)"><h3>📱 Apps e chip<span class="ck-count">0/8</span></h3><p class="ck-sub">Baixem tudo ainda no Brasil, com wi-fi.</p><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Uber ou Cabify<small>Seguros e baratos em Lima. Evitem pegar táxi comum na rua na capital.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">inDrive<small>É o mais usado em Cusco, onde o Uber tem menos carros. Bom para subir ao mirante ou a Sacsayhuamán.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">XE Currency<small>Converte sol para real na hora — ajuda a perceber quando o preço está salgado.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Google Maps offline<small>Baixem os mapas de Lima, Cusco e Águas Calientes antes de viajar.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Google Tradutor com espanhol offline<small>Útil em mercados e farmácias.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Chip peruano (Claro ou Movistar) ou eSIM (Kolet)<small>Duas opções para ter internet. <b>Chip físico:</b> mais barato, comprado em Lima em loja oficial ou num supermercado grande (Wong ou Metro), nos primeiros dias. <b>eSIM, como o Kolet:</b> compra-se ainda no Brasil pelo app, ativa sozinho ao pousar, sem fila nem documento — custa um pouco mais, mas resolve a chegada. Confiram antes se o aparelho aceita eSIM (iPhone XS em diante e a maioria dos Android recentes).</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Documento em mãos para ativar o chip<small>Por lei, todo chip físico no Peru é registrado com documento de identidade — a loja escaneia o RG ou passaporte. Quem optar pelo eSIM não precisa disso.</small></span></div><div class="ck-item" onclick="ckTog(this)"><span class="ck-box"></span><span class="ck-tx">Soles em espécie para o chip<small>O chip custa de 5 a 10 soles e a recarga com 5 a 10 GB por 10 a 15 dias sai entre 20 e 30 soles. Muitas lojas pequenas não aceitam cartão estrangeiro.</small></span></div><div class="ck-note"><b>Se forem de eSIM:</b> deixem contratado e instalado ainda no Brasil (o Kolet é uma opção conhecida por aqui) e só ativem ao pousar em Lima. Não precisa de documento nem de loja, e o WhatsApp continua no número brasileiro. Quem for de chip físico ainda precisa do RG ou passaporte na hora da compra.</div></div></div>
+    
+<h2 class="ck-h">As primeiras 24 horas em Cusco</h2>
+<p class="ck-hs">O momento mais delicado da viagem. Vocês pousam em Cusco no dia 26 à noite, e o dia 27 foi deixado livre justamente para isso.</p>
+
+<div class="ck-info" style="--ic:var(--terra)">
+  <h3>Regra de ouro na chegada</h3>
+  <ul>
+    <li><b>Descanse imediatamente.</b> Ao chegar ao hotel, não saia para passear. Deite-se por pelo menos 2 a 3 horas — o corpo precisa desse tempo parado para começar a produzir mais glóbulos vermelhos. Mesmo quem se sentir bem no desembarque paga o preço mais tarde se não descansar agora.</li>
+    <li><b>Coma muito leve.</b> A digestão na altitude fica lenta. No primeiro dia, evite carne vermelha e gordura: prefira sopas, caldos e massas leves. É por isso que o jantar de chegada é no Nuna Raymi, que tem boas sopas.</li>
+    <li><b>Zero álcool e cigarro</b> nas primeiras 48 horas. Guardem o Pisco Sour para os dias seguintes — vocês têm o jantar do Chicha e a Cicciolina pela frente.</li>
+    <li><b>Beba de 2 a 3 litros de água por dia.</b> A altitude desidrata muito mais rápido do que se percebe.</li>
+    <li><b>Mate de coca à vontade.</b> Os hotéis servem de graça no lobby.</li>
+  </ul>
+</div>
+
+<div class="ck-info" style="--ic:var(--gold)">
+  <h3>Como o dia 27 foi montado para isso</h3>
+  <p>O roteiro do dia livre segue exatamente a lógica de aclimatação: tudo plano, tudo perto, nada obrigatório.</p>
+  <ul>
+    <li><b>Manhã</b> — acordar sem despertador e café sem pressa no hotel.</li>
+    <li><b>Coricancha</b> — terreno plano, a poucas quadras da Plaza, com bancos nos jardins para sentar se o ar pesar.</li>
+    <li><b>13h, almoço no Aura</b> — rooftop com vista: sentar e contemplar, sem esforço nenhum.</li>
+    <li><b>Tarde na Plaza de Armas</b> — a Catedral é um passeio fresco, silencioso e sem subida. Um café na sacada no fim da tarde para ver as luzes acenderem.</li>
+    <li><b>19h, jantar leve no Kion</b> e cama cedo. Acordar 100% para as Fiestas Patrias no dia seguinte.</li>
+  </ul>
+</div>
+
+<div class="ck-info ck-alert">
+  <h3>Quando se preocupar</h3>
+  <p>Dor de cabeça leve, falta de ar ao subir escadas e sono ruim na primeira noite são <b>normais</b> e passam em um ou dois dias.</p>
+  <p>Procurem ajuda se aparecer <b>dor de cabeça forte que não cede com analgésico, vômitos repetidos, confusão mental, dificuldade para andar ou falta de ar em repouso</b>. A recepção dos hotéis está acostumada e tem cilindro de oxigênio; as farmácias vendem bombinhas (OxiShot). Em Cusco há atendimento médico 24h voltado a turistas.</p>
+</div>
+
+    
+<h2 class="ck-h">O clima que vocês vão pegar</h2>
+<p class="ck-hs">Julho é inverno no Peru — e alta temporada, justamente por ser a estação seca nos Andes.</p>
+<table class="ck-tbl">
+  <thead><tr><th>Onde</th><th>Temperatura</th><th>O que esperar</th></tr></thead>
+  <tbody>
+    <tr><td><b>Lima</b></td><td class="tmp">15 a 19 °C</td>
+        <td>Inverno costeiro: céu cinza, garoa fina (a <i>garúa</i>) e muita umidade. Não chove de verdade, mas raramente aparece sol. Casaco leve resolve.</td></tr>
+    <tr><td><b>Cusco</b></td><td class="tmp">18 a 20 °C de dia<br>0 a 5 °C à noite</td>
+        <td>Estação seca: dias de céu azul e sol forte, noites geladas. A amplitude é enorme — por isso as camadas de roupa.</td></tr>
+    <tr><td><b>Vale Sagrado</b></td><td class="tmp">20 a 22 °C</td>
+        <td>Mais baixo e um pouco mais quente que Cusco. Manhã fria na saída, calor no meio do dia.</td></tr>
+    <tr><td><b>Machu Picchu</b></td><td class="tmp">12 a 20 °C</td>
+        <td>Zona de mata: mais úmido e abafado que Cusco, com sol muito forte. Pode garoar rápido mesmo na seca.</td></tr>
+  </tbody>
+</table>
+<div class="ck-note" style="margin-top:14px">
+  <b>Detalhe que pega todo mundo:</b> em Cusco, faz frio na sombra e calor no sol ao mesmo tempo. Dá para queimar a pele e sentir frio no mesmo minuto — protetor solar mesmo com casaco.
+</div>
+
+    
+<h2 class="ck-h">Avisos que valem ouro</h2>
+<p class="ck-hs">Coisas específicas desta viagem que é melhor saber antes.</p>
+
+<div class="ck-info ck-alert">
+  <h3>⚠️ Não tragam folhas ou chá de coca para o Brasil</h3>
+  <p>Tomem à vontade no Peru — mas <b>não coloquem na mala de volta</b>. A lei brasileira (11.343/2006) trata a folha de coca como matéria-prima de entorpecente, e trazer, mesmo em saquinho de chá industrializado, pode ser enquadrado como tráfico internacional. A Receita apreende com frequência no aeroporto.</p>
+  <p>Antes de embarcar em Lima no dia 2, vale checar bolsos e mochilas — é comum sobrar um saquinho do hotel sem ninguém lembrar.</p>
+</div>
+
+<div class="ck-info" style="--ic:var(--gold)">
+  <h3>🇵🇪 28 de julho é feriado nacional</h3>
+  <p>O Día de la Independencia é a maior data cívica do Peru. Espere <b>bancos e muitas lojas fechados</b>, ruas do centro interditadas pelo desfile e a cidade cheia. Restaurantes lotam: por isso o almoço no Chicha está reservado.</p>
+  <p>Deixem dinheiro trocado separado na véspera e não contem com casa de câmbio aberta nesse dia.</p>
+</div>
+
+<div class="ck-info" style="--ic:var(--terra)">
+  <h3>🎫 Boleto Turístico e ingressos</h3>
+  <p>O <b>Boleto Turístico de Cusco</b> não é vendido na entrada dos sítios. Se quiserem ver <b>Sacsayhuamán</b> no dia 28, comprem antes — o parcial (Circuito 1) sai por volta de 70 soles e cobre também Qenqo, Puca Pucara e Tambomachay.</p>
+  <p>O <b>Coricancha</b> e a <b>Catedral</b> têm ingressos próprios, comprados na hora. Os ingressos de Pisac, Ollantaytambo e Machu Picchu já estão incluídos no pacote da agência.</p>
+  <p><b>Vale confirmar com a agência</b> qual circuito de Machu Picchu está no bilhete de vocês — é o que define o percurso dentro da cidadela, e não dá para mudar lá dentro.</p>
+</div>
+
+<div class="ck-info" style="--ic:var(--sky)">
+  <h3>🚕 Transporte e segurança</h3>
+  <ul>
+    <li>Em Lima, use <b>Uber ou Cabify</b> — evite táxi na rua.</li>
+    <li>Em Cusco, o <b>inDrive</b> é o mais usado. Corridas curtas custam poucos soles: use sem culpa para poupar fôlego nas ladeiras.</li>
+    <li>Não beba <b>água da torneira</b> em nenhuma das cidades. Água mineral é barata em qualquer lugar.</li>
+    <li>Em mercados cheios (San Pedro, Mercado Indio), mochila na frente do corpo e celular guardado.</li>
+    <li>Combinem um <b>ponto de encontro</b> em cada passeio — são 11 pessoas, e no desfile do dia 28 a multidão separa o grupo com facilidade.</li>
+  </ul>
+</div>
+
+<div class="ck-info" style="--ic:var(--teal)">
+  <h3>💡 Miudezas que fazem diferença</h3>
+  <ul>
+    <li><b>Gorjeta</b> no Peru gira em torno de 10%; em restaurantes maiores costuma vir como <i>servicio</i> na conta.</li>
+    <li>Muitos restaurantes de Cusco cobram <b>10% de serviço + 8% de imposto</b> à parte — a conta chega maior que o cardápio.</li>
+    <li>O <b>almoço executivo</b> (<i>menú del día</i>) é a refeição mais barata do Peru: entrada, prato e bebida por 20 a 30 soles.</li>
+    <li>Leve <b>sacola dobrável</b> — as compras do Mercado San Pedro e do Mercado Indio sempre passam do previsto.</li>
+    <li>As crianças (Ravi, Pedro e Isadora) agradecem <b>entretenimento offline</b> baixado para as quase 2h de trem e os voos.</li>
+    <li>Não é exigida <b>vacina de febre amarela</b> para Lima, Cusco e Machu Picchu — só para quem entra na Amazônia peruana.</li>
+  </ul>
+</div>
+
+    <div class="hist-foot" style="padding-top:34px">
+      <div class="ft-mark">Boa viagem!</div>
+      <p style="font-size:.85rem">Dez dias, quatro famílias e dois aniversários entre o mar de Lima e os Andes.</p>
+    </div>
+  </div>
+</div>
+
 <div id="page-orcamento" class="page">
   <div class="orc-wrap">
     <div class="orc-head">
       <div class="o-tag">Planejamento financeiro</div>
       <h2>Orçamento estimado por família</h2>
-      <p>Estimativa de gastos com <b>ingressos, atrações e refeições do roteiro de Lima</b> (dias 24 a 26 jul e 31 jul a 1 ago). Não inclui transfers, compras, hospedagem nem Cusco/Vale/Machu Picchu. Valores em reais, câmbio aproximado de R$ 1,45 por sol.</p>
+      <p>Estimativa de gastos com <b>refeições e ingressos de Lima + refeições de Cusco</b> (viagem completa de 24 jul a 1 ago). Não inclui transfers, hospedagem, ingressos de Cusco/Machu Picchu, tours da agência ou compras. Valores em reais, câmbio aproximado de R$ 1,45 por sol.</p>
     </div>
     <div id="orc-cards"></div>
     <div id="orc-total"></div>
@@ -603,33 +884,47 @@ const P={
   aero:[-12.029701,-77.116228], crowne:[-12.124672,-77.030101],
   isolina:[-12.147634,-77.022320], mirador:[-12.149687,-77.023574], cantarana:[-12.147053,-77.020932],
   bodegaverde:[-12.148167,-77.022539], mercadoindio:[-12.115797,-77.028229],
-  huaca:[-12.111208,-77.033608,
-    "data:image/jpeg;base64,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",
-  ], sanramon:[-12.121677,-77.031270],
+  huaca:[-12.111208,-77.033608], huacarest:[-12.111274,-77.033339], sanramon:[-12.121677,-77.031270],
   kennedy:[-12.121904,-77.030719],
   mercadocentral:[-12.050203,-77.026427], feriabarranco:[-12.147552,-77.021139],
-  swiss:[-12.0974807,-77.0384470], olivar:[-12.1022048,-77.0352464],
+  swiss:[-12.0974807,-77.0384470], andina:[-12.1241359,-77.0309283], olivar:[-12.1022048,-77.0352464],
   pukupuku:[-12.1182228,-77.0276816], cafebosque:[-12.0951493,-77.0335909],
   arabica:[-12.120922,-77.033600], bisetti:[-12.149835,-77.021876],
   merito:[-12.150494,-77.020754], delfino:[-12.123402,-77.036767],
   larcocafe:[-12.072271,-77.070719], ancestral:[-12.145276,-77.023079],
-  cicciolina:[-13.515995,-71.976568], mapcafe:[-13.514832,-71.977412], treehouse:[-13.155,-72.524]
+  cicciolina:[-13.515995,-71.976568], mapcafe:[-13.514832,-71.977412], fullhouse:[-13.1548,-72.5251],
+  sanblas:[-13.5147,-71.9762], sapantiana:[-13.5119,-71.9741], coricancha:[-13.5201,-71.9757],
+  nunaraymi:[-13.5157,-71.9769], casacusquena:[-13.5158,-71.9776], local:[-13.5142,-71.9754],
+  yawar:[-13.5250955,-71.9738666], regocijo:[-13.5168,-71.9800], orion:[-13.5192,-71.9812], mapacho:[-13.1546,-72.5253], sacsayhuaman:[-13.5095,-71.9819], pedra12:[-13.5158,-71.9764], borreguitos:[-13.5151,-71.9750],
+  kion:[-13.5163879,-71.9769092], morena:[-13.5158391,-71.9789673], chicha:[-13.5171485,-71.9805909],
+  limo:[-13.5159339,-71.9785934], pachapapa:[-13.5152229,-71.9746542], aura:[-13.5156567,-71.9803105],
+  pisac:[-13.4200,-71.8490], ollanta:[-13.2585,-72.2635], machu:[-13.1631,-72.5450],
+  plazacusco:[-13.5163,-71.9784], sanpedro:[-13.5195,-71.9838], sancristobal:[-13.5112,-71.9776],
+  maretazo:[-12.1229096,-77.0277089]
 };
 const NEU='#516170';
 const HOTEL='#9c3d1c';
+const HOTEL_CUSCO='#3a7ca5';
+const OPT_RED='#c2542a';
 const DAYS={
   d24:{day:'Sexta · 24 jul',title:'Chegada · 23h30',route:true,zones:['mira'],
-    stops:[{p:'aero',t:'Aeroporto Jorge Chávez',hr:'Pouso 23h30',c:NEU,g:'✈'},{p:'crowne',t:'Crowne Plaza Miraflores',hr:'Check-in ~00h30',c:HOTEL,home:1},{p:'swiss',t:'Swissotel Lima (base da Camila, Matheus e Ravi)',hr:'Check-in ~00h30',c:HOTEL,home:1}]},
-  d25:{day:'Sábado · 25 jul',title:'Centro Histórico + Museo Larco',route:true,zones:['centro'],
-    stops:[{p:'crowne',t:'Crowne Plaza (saída)',hr:'09h00',c:HOTEL,home:1,start:1},{p:'swiss',t:'Swissotel (saída da família)',hr:'09h00',c:HOTEL,home:1},{p:'plaza',t:'Plaza Mayor',hr:'09h30',c:Z.centro},{p:'sanfran',t:'Convento S. Francisco',hr:'11h00',c:Z.centro},{p:'larcocafe',t:'Almoço · Café del Museo Larco',hr:'13h00',c:Z.centro},{p:'larco',t:'Museo Larco',hr:'14h30',c:Z.centro},{p:'agua',t:'Circuito del Agua',hr:'18h00',c:Z.centro},{p:'lalucha',t:'Jantar · La Lucha Sangucheria',hr:'20h00',c:Z.mira}]},
-  d26:{day:'Domingo · 26 jul',title:'Barranco ao ar livre → Cusco',route:true,zones:['barranco'],
-    stops:[{p:'crowne',t:'Crowne Plaza (saída)',hr:'09h00',c:HOTEL,home:1,start:1},{p:'swiss',t:'Swissotel (saída da família)',hr:'09h00',c:HOTEL,home:1},{p:'malbarranco',t:'Malecón de Barranco',hr:'09h30',c:Z.barranco},{p:'mirador',t:'Mirador Catalina Recavarren',hr:'10h00',c:Z.barranco},{p:'suspiros',t:'Puente de los Suspiros',hr:'10h30',c:Z.barranco},{p:'isolina',t:'Almoço · Isolina Taberna',hr:'12h30',c:Z.barranco},{p:'crowne',t:'Crowne Plaza (pegar malas)',hr:'15h30',c:HOTEL,home:1},{p:'swiss',t:'Swissotel (pegar malas)',hr:'15h30',c:HOTEL,home:1},{p:'aero',t:'Aeroporto · voo Cusco',hr:'Saída ~16h30 · voo 18h15',c:NEU,g:'✈'}]},
-  dcusco:{day:'27 → 30 jul',title:'Cusco · Vale · Machu Picchu',route:false,cusco:true,zones:['cusco'],
-    stops:[{p:'cicciolina',t:'Cicciolina (Cusco)',c:Z.cusco},{p:'mapcafe',t:'MAP Café (Cusco)',c:Z.cusco},{p:'treehouse',t:'Tree House (Águas Calientes)',c:Z.cusco}]},
-  d31:{day:'Sexta · 31 jul',title:'Descanso + aniversário da Cássia 🎂',route:true,zones:['barranco'],
-    stops:[{p:'aero',t:'Aeroporto · chegada de Cusco',hr:'Pouso 12h15',c:NEU,g:'✈'},{p:'crowne',t:'Crowne Plaza (tarde de descanso)',hr:'Tarde livre',c:HOTEL,home:1},{p:'dedalo',t:'Dédalo (opcional · artesanato)',hr:'18h00',c:Z.barranco},{p:'merito',t:'Mérito 🎂 (jantar da Cássia)',hr:'20h00',c:Z.barranco}]},
-  d01:{day:'Sábado · 1 ago',title:'Miraflores à beira-mar',route:true,zones:['mira'],
-    stops:[{p:'crowne',t:'Crowne Plaza (saída)',hr:'10h00',c:HOTEL,home:1,start:1},{p:'larcomar',t:'Larcomar (lojas chique)',hr:'10h30',c:Z.mira},{p:'amor',t:'Parque del Amor + Malécon',hr:'11h30',c:Z.mira},{p:'delfino',t:'Almoço · Delfino Mar',hr:'13h00',c:Z.mira},{p:'huaca',t:'Tarde livre · Huaca Pucllana',hr:'15h30',c:Z.mira},{p:'mercadoindio',t:'Tarde livre · Mercado Indio',hr:'16h30',c:Z.mira},{p:'rosa',t:'La Rosa Náutica (jantar 🎂 Dani)',hr:'20h00',c:Z.mira}]},
+    stops:[{p:'aero',t:'Aeroporto Jorge Chávez',hr:'Pouso 23h30',c:NEU,g:'✈'},{p:'crowne',t:'Crowne Plaza Miraflores',hr:'Check-in ~00h30',c:HOTEL,home:1},{p:'swiss',t:'Swissotel Lima',hr:'Check-in ~00h30',c:HOTEL,home:1},{p:'andina',t:'Casa Andina Standard Benavides',hr:'Check-in ~00h30',c:HOTEL,home:1}]},
+  d25:{day:'Sábado · 25 jul',title:'Museo Larco + Centro Histórico',route:true,zones:['centro'],
+    stops:[{p:'crowne',t:'Crowne Plaza (saída)',hr:'09h30',c:HOTEL,home:1,start:1},{p:'swiss',t:'Swissotel (saída)',hr:'09h30',c:HOTEL,home:1},{p:'andina',t:'Casa Andina (saída)',hr:'09h30',c:HOTEL,home:1},{p:'larco',t:'Museo Larco',hr:'10h15',c:Z.centro},{p:'larcocafe',t:'Almoço · Café del Museo Larco',hr:'13h00',c:Z.centro},{p:'plaza',t:'Plaza Mayor e Catedral',hr:'15h00',c:Z.centro},{p:'sanfran',t:'Convento S. Francisco',hr:'15h45',c:Z.centro},{p:'agua',t:'Circuito del Agua',hr:'18h00',c:Z.centro},{p:'lalucha',t:'Jantar · La Lucha Sangucheria',hr:'20h00',c:Z.mira}]},
+  d26:{day:'Domingo · 26 jul',title:'Miraflores fácil → Cusco',route:true,zones:['mira'],
+    stops:[{p:'crowne',t:'Crowne Plaza (saída)',hr:'09h30',c:HOTEL,home:1,start:1},{p:'swiss',t:'Swissotel (saída)',hr:'09h30',c:HOTEL,home:1},{p:'andina',t:'Casa Andina (saída)',hr:'09h30',c:HOTEL,home:1},{p:'larcomar',t:'Larcomar (mirantes sobre o mar)',hr:'10h00',c:Z.mira},{p:'amor',t:'Parque del Amor + Malecón de Miraflores',hr:'11h00',c:Z.mira},{p:'maretazo',t:'Almoço · Barra Maretazo (opção)',hr:'13h00',c:Z.mira,opt:1},{p:'crowne',t:'Crowne Plaza (pegar malas)',hr:'15h30',c:HOTEL,home:1},{p:'swiss',t:'Swissotel (pegar malas)',hr:'15h30',c:HOTEL,home:1},{p:'andina',t:'Casa Andina (pegar malas)',hr:'15h30',c:HOTEL,home:1},{p:'aero',t:'Aeroporto · voo Cusco',hr:'Saída ~16h30 · voo 18h15',c:NEU,g:'✈'}]},
+  dcusco27:{day:'Segunda · 27 jul',title:'Cusco · chegada e aclimatação',route:false,cusco:true,zones:['cusco'],
+    stops:[{p:'yawar',t:'Yawar Inka Hotel (nossa base em Cusco)',c:HOTEL_CUSCO,home:1},{p:'nunaraymi',t:'Nuna Raymi (jantar chegada · 26 jul)',c:Z.cusco},{p:'coricancha',t:'Coricancha · Templo do Sol (opcional)',c:Z.cusco,opt:1},{p:'aura',t:'Aura · almoço (rooftop com vista)',c:Z.cusco},{p:'plazacusco',t:'Plaza de Armas (opcional)',c:Z.cusco,opt:1},{p:'kion',t:'Kion (jantar · 27 jul)',c:Z.cusco}]},
+  dcusco28:{day:'Terça · 28 jul',title:'Fiestas Patrias em Cusco 🇵🇪',route:false,cusco:true,zones:['cusco'],
+    stops:[{p:'yawar',t:'Yawar Inka Hotel (nossa base em Cusco)',c:HOTEL_CUSCO,home:1},{p:'plazacusco',t:'Plaza de Armas · desfile (manhã)',c:Z.cusco},{p:'regocijo',t:'Plaza Regocijo · festival gastronômico',c:Z.cusco},{p:'sanpedro',t:'Mercado San Pedro (início da tarde)',c:Z.cusco},{p:'chicha',t:'Chicha por Gastón Acurio · almoço 15h',c:Z.cusco},{p:'sanblas',t:'Bairro de San Blas (tarde)',c:Z.cusco},{p:'pedra12',t:'Pedra dos 12 Ângulos (escolham na hora)',c:Z.cusco,opt:1},{p:'borreguitos',t:'Calle 7 Borreguitos (escolham na hora)',c:Z.cusco,opt:1},{p:'sapantiana',t:'Acueducto de Sapantiana (escolham na hora)',c:Z.cusco,opt:1},{p:'sacsayhuaman',t:'Sacsayhuamán · fortaleza inca (Boleto Turístico)',c:Z.cusco,opt:1},{p:'sancristobal',t:'Mirador San Cristóbal · pôr do sol',c:Z.cusco,opt:1},{p:'local',t:'LOCAL (opção · jantar livre)',c:Z.cusco,opt:1},{p:'orion',t:'Supermercado Orion · snacks para o Vale/Machu Picchu',c:Z.cusco},{p:'casacusquena',t:'Casa Cusqueña (opção)',c:Z.cusco,opt:1}]},
+  dcusco29:{day:'Quarta · 29 jul',title:'Vale Sagrado dos Incas 🚆',route:false,cusco:true,zones:['cusco'],
+    stops:[{p:'yawar',t:'Yawar Inka Hotel (nossa base em Cusco)',c:HOTEL_CUSCO,home:1},{p:'pisac',t:'Pisac · sítio + mercado artesanal',c:Z.cusco},{p:'ollanta',t:'Ollantaytambo · fortaleza inca',c:Z.cusco},{p:'mapacho',t:'Mapacho · jantar 19h30 (Águas Calientes)',c:Z.cusco}]},
+  dcusco30:{day:'Quinta · 30 jul',title:'Machu Picchu + volta a Cusco ⛰️',route:false,cusco:true,zones:['cusco'],
+    stops:[{p:'yawar',t:'Yawar Inka Hotel (nossa base em Cusco)',c:HOTEL_CUSCO,home:1},{p:'machu',t:'Machu Picchu · cidadela inca',c:Z.cusco},{p:'fullhouse',t:'Full House (almoço · Águas Calientes)',c:Z.cusco},{p:'cicciolina',t:'Cicciolina (jantar despedida · Cusco)',c:Z.cusco}]},
+  d31:{day:'Sexta · 31 jul',title:'Descanso + aniversário da Cássia 🎂',route:true,zones:['mira'],
+    stops:[{p:'aero',t:'Aeroporto · chegada de Cusco',hr:'Pouso 12h15',c:NEU,g:'✈'},{p:'crowne',t:'Crowne Plaza (tarde de descanso)',hr:'Tarde livre',c:HOTEL,home:1},{p:'mercadoindio',t:'Mercado Indio (opcional · artesanato)',hr:'18h00',c:Z.mira,opt:1},{p:'rosa',t:'La Rosa Náutica 🎂 (jantar da Cássia · 18h)',hr:'20h00',c:Z.mira}]},
+  d01:{day:'Sábado · 1 ago',title:'Barranco todo dia + Huaca Pucllana 🎂',route:true,zones:['barranco','mira'],
+    stops:[{p:'crowne',t:'Crowne Plaza (saída)',hr:'10h00',c:HOTEL,home:1,start:1},{p:'swiss',t:'Swissotel (saída)',hr:'10h00',c:HOTEL,home:1},{p:'andina',t:'Casa Andina (saída)',hr:'10h00',c:HOTEL,home:1},{p:'dedalo',t:'Dédalo · café + artesanato de autor',hr:'10h30',c:Z.barranco},{p:'suspiros',t:'Puente de los Suspiros',hr:'11h30',c:Z.barranco},{p:'mirador',t:'Mirador Catalina Recavarren',hr:'12h00',c:Z.barranco},{p:'isolina',t:'Almoço · Isolina Taberna',hr:'13h00',c:Z.barranco},{p:'malbarranco',t:'Malecón de Barranco',hr:'15h30',c:Z.barranco},{p:'huacarest',t:'Huaca Pucllana 🎂 (jantar do Dani · 19h30)',hr:'18h30',c:Z.mira}]},
   d02:{day:'Domingo · 2 ago',title:'Despedida · voo 9h25',route:true,zones:['mira'],
     stops:[{p:'crowne',t:'Crowne Plaza',hr:'Café + check-out ~5h30',c:HOTEL,home:1},{p:'aero',t:'Aeroporto · voo SP',hr:'Voo 09h25',c:NEU,g:'✈'}]}
 };
@@ -657,11 +952,39 @@ const GMAPS={
   lalucha:'La Lucha Sangucheria Miraflores Parque Kennedy',
   cicciolina:'Cicciolina Restaurant Cusco',
   mapcafe:'MAP Café Cusco',
-  treehouse:'Tree House Restaurant Aguas Calientes',
+  fullhouse:'Full House Peruvian Cuisine Aguas Calientes',
+  sanblas:'Plaza San Blas Cusco',
+  sapantiana:'Acueducto de Sapantiana Cusco',
+  coricancha:'Qorikancha Cusco',
+  nunaraymi:'Nuna Raymi Restaurante Cusco',
+  yawar:'Yawar Inka Hotel Cusco',
+  regocijo:'Plaza Regocijo Cusco',
+  orion:'Orion Supermercados Cusco',
+  mapacho:'Mapacho Craft Beer Restaurant Aguas Calientes',
+  sacsayhuaman:'Sacsayhuaman Cusco',
+  pedra12:'Piedra de los 12 angulos Cusco',
+  borreguitos:'Calle 7 Borreguitos Cusco',
+  casacusquena:'Casa Cusqueña Restaurante Cusco',
+  local:'LOCAL Restaurant San Blas Cusco',
+  pisac:'Parque Arqueológico de Pisac Cusco',
+  ollanta:'Ollantaytambo Sitio Arqueológico Cusco',
+  machu:'Machu Picchu Cidadela Inca',
+  plazacusco:'Plaza de Armas de Cusco',
+  sanpedro:'Mercado Central de San Pedro Cusco',
+  sancristobal:'Mirador de San Cristóbal Cusco',
+  kion:'KION Peruvian Chinese Cusco',
+  morena:'Morena Peruvian Kitchen Cusco',
+  chicha:'Chicha Gaston Acurio Cusco',
+  limo:'Limo Cocina Peruana Cusco',
+  pachapapa:'Pachapapa Cusco',
+  aura:'Aura Restaurante Cusco',
+  maretazo:'Barra Maretazo Miraflores Lima',
   huaca:'Huaca Pucllana Miraflores',
+  huacarest:'Restaurant Huaca Pucllana Miraflores Lima',
   sanramon:'Pasaje San Ramón Calle de las Pizzas Miraflores',
   kennedy:'Parque Kennedy Miraflores',
   swiss:'Swissotel Lima San Isidro',
+  andina:'Casa Andina Standard Benavides Miraflores Lima',
   olivar:'Bosque El Olivar San Isidro Lima',
   pukupuku:'Puku Puku Narciso de la Colina Miraflores',
   cafebosque:'Café del Bosque San Isidro Lima',
@@ -849,13 +1172,26 @@ const INFO={
   lalucha:{r:4.5,n:10699,cat:'Sanduíches criollos',pr:1,hr:'Aberto até tarde'},
   crowne:{r:4.4,n:3500,cat:'Hotel 5★',pr:3,hr:'Miraflores'},
   aero:{r:4.1,n:60000,cat:'Aeroporto internacional',pr:0,hr:'Jorge Chávez'},
-  cicciolina:{r:4.5,n:3800,cat:'Restaurante andino',pr:3,hr:'Cusco · San Blas'},
+  cicciolina:{r:4.6,n:2498,cat:'Ítalo-peruano de autor',pr:3,hr:'12h30–21h15'},
   mapcafe:{r:4.6,n:1200,cat:'Restaurante · museu',pr:3,hr:'Cusco'},
-  treehouse:{r:4.6,n:1500,cat:'Restaurante andino',pr:3,hr:'Águas Calientes'},
+  fullhouse:{r:4.8,n:9000,cat:'Restaurante peruano',pr:3,hr:'Águas Calientes'},
+  kion:{r:4.5,n:2842,cat:'Chifa · peruano-chinês',pr:2,hr:'12h–22h'},
+  morena:{r:4.7,n:3943,cat:'Peruano contemporâneo',pr:2,hr:'12h–23h'},
+  chicha:{r:4.4,n:3370,cat:'Peruano · Gastón Acurio',pr:3,hr:'12h–22h30'},
+  limo:{r:4.7,n:4327,cat:'Nikkei · peruano-japonês',pr:2,hr:'12h–22h'},
+  nunaraymi:{r:4.4,n:3200,cat:'Peruano tradicional · menú',pr:1,hr:'Calle Triunfo'},
+  mapacho:{r:4.7,n:3775,cat:'Peruano andino · cerveja artesanal',pr:2,hr:'Águas Calientes'},
+  casacusquena:{r:4.5,n:2600,cat:'Peruano regional · rooftop',pr:2,hr:'Plaza de Armas'},
+  local:{r:4.5,n:1400,cat:'Peruano · internacional',pr:2,hr:'San Blas'},
+  pachapapa:{r:4.7,n:7192,cat:'Cocina cusqueña',pr:2,hr:'12h–22h'},
+  aura:{r:4.1,n:584,cat:'Rooftop com vista',pr:2,hr:'8h–23h'},
+  maretazo:{r:4.6,n:4924,cat:'Cevicheria · Miraflores',pr:2,hr:'12h–22h'},
   huaca:{r:4.6,n:18300,cat:'Sítio arqueológico',pr:1,hr:'9h–17h · visita guiada'},
+  huacarest:{r:4.5,n:7426,cat:'Restaurante · peruano de autor',pr:3,hr:'12h–21h · fri/sáb até 22h'},
   sanramon:{r:4.2,n:1200,cat:'Rua de pizzarias e bares',pr:1,hr:'Tarde e noite'},
   kennedy:{r:4.6,n:42000,cat:'Parque · coração de Miraflores',pr:0,hr:'Aberto 24h'},
   swiss:{r:4.6,n:7913,cat:'Hotel 5★',pr:3,hr:'San Isidro'},
+  andina:{r:4.5,n:510,cat:'Hotel · Casa Andina Standard',pr:2,hr:'Miraflores'},
   olivar:{r:4.7,n:5194,cat:'Parque · oliveiras históricas',pr:0,hr:'Aberto 24h'},
   pukupuku:{r:4.5,n:415,cat:'Cafeteria de especialidade',pr:2,hr:'7h–20h'},
   cafebosque:{r:4.3,n:46,cat:'Café · brunch',pr:2,hr:'8h–21h'},
@@ -921,13 +1257,16 @@ function carMove(id,dir,total){
 
 let map, layer;
 const HOUSE_SVG='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(45deg)"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>';
-function pin(color,num,glyph,home){
+function pin(color,num,glyph,home,opt){
+  const ink = opt ? OPT_RED : '#fff';
   let inner;
-  if(home){ inner = HOUSE_SVG; }
-  else if(glyph){ inner = `<span style="transform:rotate(45deg);color:#fff;font-size:12px;line-height:1">${glyph}</span>`; }
-  else if(num!=null){ inner = `<span style="transform:rotate(45deg);color:#fff;font:600 11px/1 'Outfit',sans-serif">${num}</span>`; }
+  if(home){ inner = opt ? HOUSE_SVG.replace(/fill="[^"]*"/g,`fill="${OPT_RED}"`).replace(/stroke="[^"]*"/g,`stroke="${OPT_RED}"`) : HOUSE_SVG; }
+  else if(glyph){ inner = `<span style="transform:rotate(45deg);color:${ink};font-size:12px;line-height:1">${glyph}</span>`; }
+  else if(num!=null){ inner = `<span style="transform:rotate(45deg);color:${ink};font:600 11px/1 'Outfit',sans-serif">${num}</span>`; }
   else { inner=''; }
-  return L.divIcon({className:'',html:`<div style="width:24px;height:24px;border-radius:50% 50% 50% 0;background:${color};transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center">${inner}</div>`,iconSize:[24,24],iconAnchor:[12,22]});
+  const bg = opt ? '#fff' : color;
+  const bd = opt ? OPT_RED : '#fff';
+  return L.divIcon({className:'',html:`<div style="width:24px;height:24px;border-radius:50% 50% 50% 0;background:${bg};transform:rotate(-45deg);border:2px solid ${bd};box-shadow:0 1px 4px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center">${inner}</div>`,iconSize:[24,24],iconAnchor:[12,22]});
 }
 // ícones das categorias de referência
 const REF_ICONS={
@@ -950,7 +1289,7 @@ function popupOpts(){
     : {maxWidth:240,minWidth:216,className:'gcard-popup',closeButton:false,autoPan:true,autoPanPaddingTopLeft:[24,180],autoPanPaddingBottomRight:[24,24],keepInView:false};
 }
 function addStop(layer,c,opts){
-  const mk=L.marker(c,{icon:pin(opts.color,opts.num,opts.glyph,opts.home)}).addTo(layer);
+  const mk=L.marker(c,{icon:pin(opts.color,opts.num,opts.glyph,opts.home,opts.opt)}).addTo(layer);
   const cleanTitle = opts.t.replace(/\s*🎂.*$/,'').replace(/\s*\(.*?\)$/,'');
   mk.bindPopup(cardHTML(opts.key,cleanTitle,opts.color),popupOpts());
   // abre ao passar o mouse; mantém aberto enquanto o mouse estiver no pino OU no card
@@ -1018,7 +1357,7 @@ function showDay(key){
     if(s.home)hotelInStops=true;
     let num=null;
     if(!d.cusco && !s.g && !s.home){ n++; num=n; }   // só paradas turísticas numeram
-    addStop(layer,c,{color:s.c,num:num,glyph:s.g,home:s.home,t:s.t,hr:s.hr,key:s.p});
+    addStop(layer,c,{color:s.c,num:num,glyph:s.g,home:s.home,opt:s.opt,t:s.t,hr:s.hr,key:s.p});
   });
   // hotel SEMPRE pinado quando o dia é em Lima (mesmo que não seja parada)
   if(!d.cusco && !hotelInStops){
@@ -1030,7 +1369,26 @@ function showDay(key){
     const dayStopKeys=new Set(d.stops.map(s=>s.p));
     REFS.filter(r=>!dayStopKeys.has(r.k)).forEach(r=>addRef(layer,r));
   }
-  if(d.route&&latlngs.length>1)L.polyline(latlngs,{color:'#3a7ca5',weight:3,opacity:.6,dashArray:'6 7'}).addTo(layer);
+  // Traçado: hotéis (ou qualquer bloco de pontos 'home' seguidos) viram um grupo
+  // paralelo. Cada um liga direto ao ponto comum seguinte/anterior, em vez de
+  // formar uma corrente passando por dentro dos outros hotéis.
+  if(d.route&&latlngs.length>1){
+    const nodes=[];
+    d.stops.forEach(st=>{
+      const c=P[st.p]; if(!c)return;
+      const last=nodes[nodes.length-1];
+      if(st.home&&last&&last.home) last.pts.push(c);
+      else nodes.push({home:!!st.home,pts:[c]});
+    });
+    const lineOpts={color:'#3a7ca5',weight:3,opacity:.6,dashArray:'6 7'};
+    for(let i=0;i<nodes.length-1;i++){
+      nodes[i].pts.forEach(a=>{
+        nodes[i+1].pts.forEach(b=>{
+          L.polyline([a,b],lineOpts).addTo(layer);
+        });
+      });
+    }
+  }
   // enquadra focando nos pontos do bairro (ignora o aeroporto p/ não afastar demais)
   const usePts = fitPts.length ? fitPts : latlngs;
   const bounds=L.latLngBounds(usePts);
@@ -1064,12 +1422,14 @@ function scrollDayIntoView(card){
   }
 }
 // clique num card de restaurante de Cusco foca aquele ponto
-function badgeHTML(color,num,glyph,home){
+function badgeHTML(color,num,glyph,home,opt){
+  const ink = opt ? OPT_RED : '#fff';
   let inner='';
-  if(home)inner=`<span style="display:flex">${HOUSE_SVG.replace('width="13" height="13"','width="11" height="11"')}</span>`;
-  else if(glyph)inner=`<span style="font-size:11px">${glyph}</span>`;
-  else if(num!=null)inner=`<span class="pin-num">${num}</span>`;
-  return `<span class="tl-pin"><span class="pin-shape" style="background:${color}">${inner}</span></span>`;
+  if(home)inner=`<span style="display:flex">${(opt?HOUSE_SVG.replace(/fill="[^"]*"/g,`fill="${OPT_RED}"`).replace(/stroke="[^"]*"/g,`stroke="${OPT_RED}"`):HOUSE_SVG).replace('width="13" height="13"','width="11" height="11"')}</span>`;
+  else if(glyph)inner=`<span style="font-size:11px;color:${ink}">${glyph}</span>`;
+  else if(num!=null)inner=`<span class="pin-num" style="color:${ink}">${num}</span>`;
+  const style = opt ? `background:#fff;border-color:${OPT_RED}` : `background:${color}`;
+  return `<span class="tl-pin"><span class="pin-shape" style="${style}">${inner}</span></span>`;
 }
 function paintBadges(){
   Object.keys(DAYS).forEach(key=>{
@@ -1084,7 +1444,7 @@ function paintBadges(){
       if(item){
         item.setAttribute('data-done','1');
         const dot=item.querySelector('.tl-dot');
-        if(dot)dot.outerHTML=badgeHTML(s.c,num,s.g,s.home);
+        if(dot)dot.outerHTML=badgeHTML(s.c,num,s.g,s.home,s.opt);
         const title=item.querySelector('.tl-title');
         if(title){
           // título clicável: abre o card daquele pino no mapa
@@ -1107,12 +1467,113 @@ function paintBadges(){
       }
     });
   });
+  // passagem extra: itens cujo pin vive no mapa de OUTRO dia (ex.: jantar de chegada
+  // em Cusco listado no card do dia 26, cujo mapa é de Lima). Liga clique + link Maps.
+  document.querySelectorAll('.tl-item[data-stop]:not([data-done])').forEach(item=>{
+    const p=item.getAttribute('data-stop');
+    const dk=dayForStop(p);
+    if(!dk||!P[p])return;
+    item.setAttribute('data-done','1');
+    const st=(DAYS[dk].stops||[]).find(s=>s.p===p);
+    const dot=item.querySelector('.tl-dot');
+    if(dot&&st)dot.outerHTML=badgeHTML(st.c,null,st.g,st.home,st.opt);
+    const title=item.querySelector('.tl-title');
+    if(!title)return;
+    title.style.cursor='pointer';
+    title.setAttribute('data-stopkey',p);
+    title.setAttribute('data-daykey',dk);
+    title.addEventListener('click',ev=>{
+      if(ev.target.closest('.tl-gmap'))return;
+      goToMapStop(p);
+    });
+    if(!title.querySelector('.tl-gmap')){
+      const a=document.createElement('a');
+      a.className='tl-gmap';a.href=gmapsURL(p);a.target='_blank';a.rel='noopener';
+      a.innerHTML='📍 Maps';
+      title.appendChild(a);
+    }
+  });
 }
 function focusStop(p,ev){
   ev.stopPropagation();
   const c=P[p];if(!c||!map)return;
   map.flyTo(c,15,{duration:.8});
 }
+// ===== checklist (marcações salvas no proprio aparelho) =====
+const CK_KEY='peru2026.checklist.v1';
+// id estavel por item: derivado do texto do item, nao da posicao na lista
+function ckId(el){
+  const tx=el.querySelector('.ck-tx');
+  if(!tx)return null;
+  let s='';
+  tx.childNodes.forEach(n=>{if(n.nodeType===3)s+=n.nodeValue;});
+  s=(s||tx.textContent||'').replace(/\s+/g,' ').trim();
+  if(!s)return null;
+  let h=5381;
+  for(let i=0;i<s.length;i++){h=((h<<5)+h+s.charCodeAt(i))>>>0;}
+  return 'i'+h.toString(36)+'-'+s.length;
+}
+function ckStamp(msg){
+  const el=document.getElementById('ckSaveTxt');
+  if(el)el.textContent=msg;
+}
+function ckStore(){
+  const done=[];
+  document.querySelectorAll('#page-checklist .ck-item.done').forEach(i=>{
+    const id=ckId(i); if(id)done.push(id);
+  });
+  try{
+    localStorage.setItem(CK_KEY,JSON.stringify(done));
+    ckStamp(done.length?'✓ salvo neste aparelho':'nada marcado ainda');
+  }catch(e){
+    ckStamp('⚠️ este navegador não está salvando');
+  }
+}
+function ckLoad(){
+  let done=[];
+  try{
+    const raw=localStorage.getItem(CK_KEY);
+    if(raw)done=JSON.parse(raw)||[];
+  }catch(e){
+    ckStamp('⚠️ este navegador não está salvando');
+    return;
+  }
+  if(done.length){
+    const set=new Set(done);
+    document.querySelectorAll('#page-checklist .ck-item').forEach(i=>{
+      const id=ckId(i);
+      if(id&&set.has(id))i.classList.add('done');
+    });
+  }
+  ckStamp(done.length?'✓ salvo neste aparelho':'nada marcado ainda');
+}
+function ckTog(el){
+  el.classList.toggle('done');
+  ckSync();
+  ckStore();
+}
+function ckReset(){
+  if(!confirm('Desmarcar todos os itens do checklist? Isso apaga só a sua lista, neste aparelho.'))return;
+  document.querySelectorAll('#page-checklist .ck-item.done').forEach(i=>i.classList.remove('done'));
+  ckSync();
+  ckStore();
+}
+function ckSync(){
+  let tot=0, don=0;
+  document.querySelectorAll('#page-checklist .ck-card').forEach(c=>{
+    const its=c.querySelectorAll('.ck-item');
+    const d=c.querySelectorAll('.ck-item.done').length;
+    tot+=its.length; don+=d;
+    const cnt=c.querySelector('.ck-count');
+    if(cnt){cnt.textContent=d+'/'+its.length;cnt.style.color=(d===its.length&&d>0)?'var(--terra)':'';}
+  });
+  const pct=tot?Math.round(don/tot*100):0;
+  const p=document.getElementById('ckPct'), b=document.getElementById('ckBar'), t=document.getElementById('ckTxt');
+  if(p)p.textContent=pct+'%';
+  if(b)b.style.width=pct+'%';
+  if(t)t.textContent=don+' de '+tot+' itens prontos';
+}
+document.addEventListener('DOMContentLoaded',function(){ckLoad();ckSync();});
 // ===== histórias dos locais (página Sobre o Peru) =====
 const STORIES={
   lima:[
@@ -1204,7 +1665,7 @@ function goToMapStop(stopKey){
   setTimeout(()=>openStopCard(dayKey,stopKey),isMobile()?420:300);
 }
 // ===== guia temático: parques, mercados, cafés =====
-const ZBADGE={centro:['Centro',Z.centro],mira:['Miraflores',Z.mira],barranco:['Barranco',Z.barranco]};
+const ZBADGE={centro:['Centro',Z.centro],mira:['Miraflores',Z.mira],barranco:['Barranco',Z.barranco],cusco:['Cusco',Z.cusco]};
 const GUIDE={
   parques:[
     {k:'kennedy',n:'Parque Kennedy',z:'mira',d:'O coração de Miraflores: praças, feirinhas de arte no fim de tarde e os famosos gatinhos que vivem soltos por ali. Cercado de cafés e restaurantes.'},
@@ -1230,10 +1691,20 @@ const GUIDE={
   restaurantes:[
     {k:'larcocafe',n:'Café del Museo Larco',z:'centro',pp:'R$ 90–140',d:'Restaurante no jardim florido do Museo Larco. Cozinha peruana clássica num dos cenários mais bonitos de Lima. Almoço do dia 25.'},
     {k:'lalucha',n:'La Lucha Sanguchería',z:'mira',pp:'R$ 25–45',d:'Os sanduíches mais queridos de Lima — chicharrón, lechón — com batatas e sucos naturais. Informal e barato. Jantar do dia 25.'},
-    {k:'isolina',n:'Isolina Taberna',z:'barranco',pp:'R$ 90–150',d:'Taberna criolla premiada, porções generosas para dividir. Comida caseira peruana de verdade. Almoço do dia 26.'},
-    {k:'merito',n:'Mérito',z:'barranco',pp:'R$ 290–450',d:'Restaurante autoral venezuelano-peruano, um dos mais aclamados de Lima. Jantar de aniversário da Cássia (dia 31). Preço à la carte; o menu degustação com vinhos é bem mais caro. Reservar com antecedência.'},
-    {k:'delfino',n:'Delfino Mar',z:'mira',pp:'R$ 70–120',d:'Cevicheria querida em Miraflores: ceviche fresco e frutos do mar com ótimo custo-benefício. Almoço do dia 1º.'},
-    {k:'rosa',n:'La Rosa Náutica',z:'mira',pp:'R$ 180–300',d:'Jantar sobre o píer, vista para o mar, ambiente estilo Titanic. Celebração dos 70 anos do Dani (dia 1º). Experiência icônica de Lima.'}
+    {k:'maretazo',n:'Barra Maretazo',z:'mira',pp:'R$ 60–100',d:'Cevicheria em Miraflores muito bem avaliada (nota 4.6, ~5 mil reviews). Ceviches frescos, risoto rosé de camarão e opção "arma tu barra" (2 itens + bebida). Almoço do dia 26 antes do voo.'},
+    {k:'isolina',n:'Isolina Taberna',z:'barranco',pp:'R$ 90–150',d:'Taberna criolla premiada, porções generosas para dividir. Comida caseira peruana de verdade. Almoço do dia 1º (dia em Barranco).'},
+    {k:'huacarest',n:'Restaurant Huaca Pucllana',z:'mira',pp:'R$ 260–400',d:'Restaurante peruano de autor dentro do sítio arqueológico da Huaca Pucllana, com a pirâmide pré-inca iluminada ao lado das mesas. Jantar de aniversário da Cássia (dia 31). Reservar mesa com vista para a pirâmide.'},
+    {k:'rosa',n:'La Rosa Náutica',z:'mira',pp:'R$ 180–300',d:'Jantar sobre o píer, vista para o mar, ambiente estilo Titanic. Celebração dos 70 anos do Dani (dia 1º) — chegar cedo para o pôr do sol. Experiência icônica de Lima.'},
+    {k:'morena',n:'Morena Peruvian Kitchen (Cusco · opção)',z:'cusco',pp:'R$ 80–140',d:'Na Plaza de Armas, nota 4.7. Peruano contemporâneo, ambiente calmo, opções leves (ceviches, tacos de peixe). Alternativa de jantar em Cusco.'},
+    {k:'nunaraymi',n:'Nuna Raymi (Cusco)',z:'cusco',pp:'R$ 40–70',d:'Comida peruana tradicional pertinho da Plaza (Calle Triunfo), com sopas quentinhas ótimas para a chegada na altitude e preço acessível. Jantar de chegada em Cusco (dia 26).'},
+    {k:'kion',n:'Kion (Cusco)',z:'cusco',pp:'R$ 50–90',d:'Chifa peruano-chinês perto da Plaza. Comida leve (sopas, macarrão saltado, wontons), barata e leve para a altitude. Jantar do dia 27.'},
+    {k:'aura',n:'Aura Rooftop (Cusco)',z:'cusco',pp:'R$ 60–120',d:'Rooftop com vista panorâmica de Cusco. Almoço do dia 27 (aclimatação) — parada tranquila para ver a cidade do alto; vale mais pela vista e pelo clima do que pela cozinha.'},
+    {k:'chicha',n:'Chicha por Gastón Acurio (Cusco)',z:'cusco',pp:'R$ 140–230',d:'Restaurante do chef mais famoso do Peru, na Plaza Regocijo (mesmo local do festival gastronômico das Fiestas Patrias). Cozinha peruana elegante. Almoço tardio (~15h) do dia 28.'},
+    {k:'mapacho',n:'Mapacho (Águas Calientes)',z:'cusco',pp:'R$ 90–150',d:'À beira do rio Vilcanota, ao lado da linha do trem. Cervejaria artesanal com cozinha peruana andina (trucha, alpaca, ceviche, quinoa), música ao vivo, nota 4.7. Jantar do dia 29 em Águas Calientes.'},
+    {k:'fullhouse',n:'Full House (Águas Calientes)',z:'cusco',pp:'R$ 110–170',d:'À beira do rio Vilcanota, ao lado da estação de trem em Águas Calientes. Cozinha peruana muito bem avaliada (ceviche de trucha, ají de gallina, alpaca), vista do rio. Almoço do dia 30 antes do trem de volta.'},
+    {k:'cicciolina',n:'Cicciolina (Cusco)',z:'cusco',pp:'R$ 120–190',d:'A um quarteirão da Plaza de Armas (Calle Palacio 110), cozinha ítalo-peruana de autor: massas frescas, forno a lenha, ceviches, trucha e alpaca. Nota 4.6. Jantar de despedida dos Andes (dia 30) — mais leve que a cocina cusqueña, ideal para a última noite em altitude.'},
+    {k:'casacusquena',n:'Casa Cusqueña (Cusco · opção)',z:'cusco',pp:'R$ 90–150',d:'Na Plaza de Armas (Portal Belén), rooftop com vista da Catedral e música ao vivo. Cozinha regional cusqueña com toque contemporâneo (ceviches, trucha, cuy, causas). Bom custo-benefício e ótima para grupos. Alternativa de almoço ou jantar em Cusco.'},
+    {k:'local',n:'LOCAL (Cusco · opção)',z:'cusco',pp:'R$ 80–140',d:'Em San Blas, ambiente charmoso e aconchegante. Massas, carnes, pizzas e pratos peruanos bem executados, drinks elogiados. Opção para o jantar livre do dia 28.'}
   ]
 };
 function renderGuide(){
@@ -1275,26 +1746,30 @@ const FAMILIES=[
 const TIX={
   larco:a=>a<=2?0:a<=8?1:a<=17?25:a>=60?35:50,
   sanfran:a=>a<=11?5:a<=25?10:20,
-  agua:a=>a<5?0:a>=60?2.5:5,
+  agua:a=>a<5?0:7,
   huaca:a=>a<=12?0:15
 };
 // refeições: custo médio por pessoa em REAIS (criança 3-8 paga ~60%)
-const MEALS={larcocafe:115,lalucha:35,isolina:120,merito:370,delfino:95,rosa:240};
+const MEALS={larcocafe:115,lalucha:35,maretazo:80,isolina:120,huacarest:330,rosa:240,
+  kion:70,morena:110,chicha:180,fullhouse:130,limo:130,local:100,nunaraymi:60,cicciolina:150,mapacho:110};
 const MEAL_AVG=70; // refeição média em Lima (almoços/jantares sem restaurante marcado)
 const mealPP=(v,a)=>a<=8?Math.round(v*0.6):v;
 function calcFamily(membros){
-  let d25=0,d26=0,d31=0,d01=0;
+  let d25=0,d26=0,d31=0,d01=0,dcusco=0;
   membros.forEach(a=>{
-    // 25/jul: ingressos + almoço (Larco) + jantar (La Lucha)
+    // 25/jul: ingressos (Larco, S. Francisco, Circuito) + almoço (Café del Museo) + jantar (La Lucha)
     d25+=(TIX.sanfran(a)+TIX.larco(a)+TIX.agua(a))*SOL + mealPP(MEALS.larcocafe,a) + mealPP(MEALS.lalucha,a);
-    // 26/jul: almoço (Isolina). Jantar é em Cusco (voo 18h15), não conta em Lima.
-    d26+=mealPP(MEALS.isolina,a);
-    // 31/jul: volta de Cusco 12h15 -> almoço médio (sem restaurante marcado) + jantar (Mérito)
-    d31+=mealPP(MEAL_AVG,a) + mealPP(MEALS.merito,a);
-    // 01/ago: Huaca + almoço (Delfino) + jantar (Rosa Náutica)
-    d01+=TIX.huaca(a)*SOL + mealPP(MEALS.delfino,a) + mealPP(MEALS.rosa,a);
+    // 26/jul (Lima): almoço Barra Maretazo. Jantar em Cusco (Kion).
+    d26+=mealPP(MEALS.maretazo,a) + mealPP(MEALS.kion,a);
+    // Cusco 26-30/jul: jantar Nuna Raymi (26) + almoço Aura/jantar Kion (27) + almoço tardio Chicha/jantar livre (28) + Vale/jantar Mapacho (29) + almoço Full House/jantar Cicciolina (30)
+    // Estimativa: soma refeições marcadas principais + médios para o restante (cafés e almoços livres).
+    dcusco+=mealPP(MEALS.nunaraymi,a) + mealPP(MEALS.local,a) + mealPP(MEALS.kion,a) + mealPP(MEALS.chicha,a) + mealPP(MEALS.mapacho,a) + mealPP(MEALS.fullhouse,a) + mealPP(MEALS.cicciolina,a) + mealPP(MEAL_AVG,a);
+    // 31/jul: volta de Cusco 12h15 -> almoço médio + jantar aniversário Cássia (Huaca Pucllana)
+    d31+=mealPP(MEAL_AVG,a) + mealPP(MEALS.huacarest,a);
+    // 01/ago: dia em Barranco -> almoço (Isolina) + jantar aniversário Dani (Rosa Náutica)
+    d01+=mealPP(MEALS.isolina,a) + mealPP(MEALS.rosa,a);
   });
-  return {d25,d26,d31,d01,total:d25+d26+d31+d01};
+  return {d25,d26,d31,d01,dcusco,total:d25+d26+dcusco+d31+d01};
 }
 const brl=v=>'R$ '+Math.round(v).toLocaleString('pt-BR');
 function renderOrcamento(){
@@ -1311,10 +1786,11 @@ function renderOrcamento(){
       ${foto}
       <h3>${f.nome}</h3>
       <div class="ofam-sub">${f.sub} · ${ppl} pessoa${ppl>1?'s':''}</div>
-      <div class="ofam-row"><span>25 jul · Centro + Larco</span><span>${brl(c.d25)}</span></div>
-      <div class="ofam-row"><span>26 jul · Almoço Barranco</span><span>${brl(c.d26)}</span></div>
-      <div class="ofam-row"><span>31 jul · Almoço + Mérito 🎂</span><span>${brl(c.d31)}</span></div>
-      <div class="ofam-row"><span>1 ago · Miraflores + Rosa Náutica 🎂</span><span>${brl(c.d01)}</span></div>
+      <div class="ofam-row"><span>25 jul · Larco + Centro</span><span>${brl(c.d25)}</span></div>
+      <div class="ofam-row"><span>26 jul · Maretazo + Kion (Cusco)</span><span>${brl(c.d26)}</span></div>
+      <div class="ofam-row"><span>27–30 jul · Cusco/Vale/MP</span><span>${brl(c.dcusco)}</span></div>
+      <div class="ofam-row"><span>31 jul · Huaca Pucllana 🎂</span><span>${brl(c.d31)}</span></div>
+      <div class="ofam-row"><span>1 ago · Barranco + Rosa Náutica 🎂</span><span>${brl(c.d01)}</span></div>
       <div class="ofam-tot"><span>Total da família</span><span>${brl(c.total)}</span></div>
     </div>`;
   }).join('');
@@ -1327,9 +1803,11 @@ function renderOrcamento(){
   detailEl.innerHTML=`<div class="orc-detail-box">
     <h4>O que está incluído nas estimativas</h4>
     <ul>
-      <li><b>Ingressos</b> (com desconto por idade): Convento San Francisco (~S/20 adulto, S/10 jovem, S/5 criança), Museo Larco (S/50 adulto, S/35 acima de 60, S/25 de 9–17 anos, S/1 de 3–8), Circuito del Agua (S/5, metade para idosos, grátis abaixo de 5), Huaca Pucllana (~S/15, crianças não pagam).</li>
-      <li><b>Refeições do roteiro</b> (média por pessoa): Café del Museo Larco ~R$115, La Lucha ~R$35, Isolina ~R$120, Mérito ~R$370, Delfino Mar ~R$95, Rosa Náutica ~R$240. Crianças pequenas contam ~60%.</li>
-      <li>Para refeições <b>sem restaurante marcado</b> no roteiro (como o almoço do dia 31, na volta de Cusco), considerei uma <b>refeição média em Lima de ~R$70 por pessoa</b>.</li>
+      <li><b>Ingressos</b> (com desconto por idade): Convento San Francisco (~S/20 adulto, S/10 jovem, S/5 criança), Museo Larco (S/50 adulto, S/35 acima de 60, S/25 de 9–17 anos, S/1 de 3–8 — 5 soles a menos por pessoa comprando online), Circuito del Agua (S/7, grátis abaixo de 5 anos), Huaca Pucllana (~S/15, crianças não pagam).</li>
+      <li><b>Refeições em Lima</b> (média por pessoa): Café del Museo Larco ~R$115, La Lucha ~R$35, Barra Maretazo ~R$80, Isolina ~R$120, Restaurant Huaca Pucllana ~R$330 (🎂 Cássia), Rosa Náutica ~R$240 (🎂 Dani).</li>
+      <li><b>Refeições em Cusco</b> (média por pessoa): Nuna Raymi (jantar chegada 26) ~R$60, Aura (almoço 27) ~R$90, Kion (jantar 27) ~R$70, Chicha por Gastón Acurio (almoço tardio 28) ~R$180, jantar livre do dia 28 ~R$60, Mapacho (jantar 29) ~R$110, Full House (almoço 30) ~R$130, Cicciolina (jantar 30) ~R$150. Crianças pequenas contam ~60%.</li>
+      <li>Para refeições <b>sem restaurante marcado</b> (almoços em Cusco durante Fiestas Patrias e Vale Sagrado, almoço de 31/jul), considerei uma <b>refeição média de ~R$70 por pessoa</b>. O orçamento de Cusco inclui os 4 jantares principais + 3 almoços médios.</li>
+      <li><b>Não incluídos:</b> transfers/táxis, ingressos de Cusco/Machu Picchu, hospedagem (paga separadamente), compras, bebidas extras.</li>
       <li>Plaza Mayor, Barranco, parques, miradouros e malecón são <b>gratuitos</b>.</li>
     </ul>
   </div>
